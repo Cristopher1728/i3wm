@@ -13,6 +13,17 @@ echo "" >> ~/.config/i3/config
 echo "#Activar rofi ( rofi-theme-selector )" >> ~/.config/i3/config
 echo "bindsym $mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
 " >> ~/.config/i3/config
+echo "exec --no-startup-id picom" >> ~/.config/i3/config
+echo "exec --no-startup-id nitrogen --restore" >> ~/.config/i3/config
+echo "exec --no-startup-id polybar" >> ~/.config/i3/config
+echo "exec --no-startup-id ulauncher" >> ~/.config/i3/config
+echo "exec --no-startup-id conky" >> ~/.config/i3/config
+
+echo "" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
 echo "alias x='exit'" >> ~/.config/i3/config
 echo "alias x='exit'" >> ~/.config/i3/config
 echo "alias x='exit'" >> ~/.config/i3/config
