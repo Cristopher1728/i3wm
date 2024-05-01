@@ -1,6 +1,6 @@
 termux-setup-storage
 pkg update && pkg upgrade -y
-pkg install ruby wget neofetch htop
+pkg install ruby wget neofetch htop w3m sc mc cmatrix -y
 wget https://github.com/busyloop/lolcat/archive/master.zip
 unzip master.zip
 cd lolcat-master/bin
@@ -22,4 +22,6 @@ echo "alias x='exit'" >> $PREFIX/etc/bash.bashrc
 
 echo "alias i='cd ~ && ls -l'" >> $PREFIX/etc/bash.bashrc
 
+clear
+cmatrix
 neofetch |lolcat -as 500
