@@ -44,19 +44,22 @@ echo "client.placeholder             #000000        #0c0c0c         #ffffff     
 
 echo "client.background #ffffff" >> ~/.config/i3/config
 
-echo "" >> ~/.config/i3/config
-echo "xxx" >> ~/.config/i3/config
-echo "xxx" >> ~/.config/i3/config
-echo "xxx" >> ~/.config/i3/config
-echo "xxx" >> ~/.config/i3/config
-echo "xxx" >> ~/.config/i3/config
-echo "xxx" >> ~/.config/i3/config
-echo "xxx" >> ~/.config/i3/config
-echo "xxx" >> ~/.config/i3/config
-echo "xxx" >> ~/.config/i3/config
-echo "xxx" >> ~/.config/i3/config
-echo "xxx" >> ~/.config/i3/config
-echo "xxx" >> ~/.config/i3/config
-echo "xxx" >> ~/.config/i3/config
-echo "xxx" >> ~/.config/i3/config
+echo "" >> $PREFIX/etc/bash.bashrc
+echo "" >> $PREFIX/etc/bash.bashrc
+echo "" >> $PREFIX/etc/bash.bashrc
+echo "clear" >> $PREFIX/etc/bash.bashrc
+echo "neofetch |lolcat -as 500" >> $PREFIX/etc/bash.bashrc
 
+echo "alias sh1='cd $PREFIX/etc && nano bash.bashrc'" >> $PREFIX/etc/bash.bashrc
+
+echo "alias up='pkg upd && pkg upg -y'" >> $PREFIX/etc/bash.bashrc
+
+echo "alias ne='clear && neofetch |lolcat -as 250'" >> $PREFIX/etc/bash.bashrc
+
+echo "alias x='exit'" >> $PREFIX/etc/bash.bashrc
+
+echo "alias i='cd ~ && ls -l'" >> $PREFIX/etc/bash.bashrc
+
+clear
+cmatrix
+neofetch |lolcat -as 500
