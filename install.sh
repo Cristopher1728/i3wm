@@ -7,4 +7,21 @@ sudo wget https://github.com/Ulauncher/Ulauncher/releases/download/5.15.7/ulaunc
 sudo dpkg -i ulauncher_5.15.7_all.deb
 sudo apt-get install -f
 
+echo "" >> ~/.config/i3/config
+echo "" >> ~/.config/i3/config
+echo "" >> ~/.config/i3/config
+echo "#Activar rofi ( rofi-theme-selector )" >> ~/.config/i3/config
+echo "bindsym $mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
+" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
+echo "alias x='exit'" >> ~/.config/i3/config
 
