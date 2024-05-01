@@ -11,6 +11,15 @@ echo "" >> $PREFIX/etc/bash.bashrc
 echo "" >> $PREFIX/etc/bash.bashrc
 echo "clear" >> $PREFIX/etc/bash.bashrc
 echo "neofetch |lolcat -as 500" >> $PREFIX/etc/bash.bashrc
+
 echo "alias sh1='cd $PREFIX/etc && nano bash.bashrc'" >> $PREFIX/etc/bash.bashrc
+
+echo "alias up='pkg upd && pkg upg -y'" >> $PREFIX/etc/bash.bashrc
+
+echo "alias ne='clear && neofetch |lolcat -as 250'" >> $PREFIX/etc/bash.bashrc
+
+echo "alias x='exit'" >> $PREFIX/etc/bash.bashrc
+
+echo "alias i='cd ~ && ls -l'" >> $PREFIX/etc/bash.bashrc
 
 neofetch |lolcat -as 500
