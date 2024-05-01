@@ -20,10 +20,11 @@ echo "exec --no-startup-id ulauncher" >> ~/.config/i3/config
 echo "exec --no-startup-id conky" >> ~/.config/i3/config
 
 echo "" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
+echo "#Ejecutar espaciado entre ventanas" >> ~/.config/i3/config
+echo "gaps outer 0" >> ~/.config/i3/config
+echo "gaps inner 7" >> ~/.config/i3/config
+
+echo "" >> ~/.config/i3/config
 echo "alias x='exit'" >> ~/.config/i3/config
 echo "alias x='exit'" >> ~/.config/i3/config
 echo "alias x='exit'" >> ~/.config/i3/config
