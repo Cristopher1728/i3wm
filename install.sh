@@ -25,15 +25,38 @@ echo "gaps outer 0" >> ~/.config/i3/config
 echo "gaps inner 7" >> ~/.config/i3/config
 
 echo "" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
-echo "alias x='exit'" >> ~/.config/i3/config
+echo "#Grosor de las lineas de las ventanas" >> ~/.config/i3/config
+echo "for_window [class="^.*"] border pixel 3" >> ~/.config/i3/config
+
+echo "" >> ~/.config/i3/config
+
+echo "#class                                border            backgr.             text            indicador        child_border" >> ~/.config/i3/config
+
+echo "client.focused                    #4c7899        #285577        #ffffff           #3BFF00          #3BFF00" >> ~/.config/i3/config
+
+echo "client.focused_inactive     #33333          #5f676a         #ffffff           #484e50         #FF00FF" >> ~/.config/i3/config
+
+echo "client.unfocused                #333333        #222222        #888888      #292d2e         #222222" >> ~/.config/i3/config
+
+echo "client.urgent                      #2f343a         #900000        #ffffff          #900000         #FF0000" >> ~/.config/i3/config
+
+echo "client.placeholder             #000000        #0c0c0c         #ffffff          #000000         #00FFFF" >> ~/.config/i3/config
+
+echo "client.background #ffffff" >> ~/.config/i3/config
+
+echo "" >> ~/.config/i3/config
+echo "xxx" >> ~/.config/i3/config
+echo "xxx" >> ~/.config/i3/config
+echo "xxx" >> ~/.config/i3/config
+echo "xxx" >> ~/.config/i3/config
+echo "xxx" >> ~/.config/i3/config
+echo "xxx" >> ~/.config/i3/config
+echo "xxx" >> ~/.config/i3/config
+echo "xxx" >> ~/.config/i3/config
+echo "xxx" >> ~/.config/i3/config
+echo "xxx" >> ~/.config/i3/config
+echo "xxx" >> ~/.config/i3/config
+echo "xxx" >> ~/.config/i3/config
+echo "xxx" >> ~/.config/i3/config
+echo "xxx" >> ~/.config/i3/config
 
