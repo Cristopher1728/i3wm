@@ -4,5 +4,7 @@ sudo apt install i3 chromium chromium-l10n suckless-tools i3blocks lightdm nitro
 sudo apt install curl && sudo curl -fsSLo /usr/share/keyrings brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list && sudo apt update && sudo apt install brave-browser
 
 sudo wget https://github.com/Ulauncher/Ulauncher/releases/download/5.15.7/ulauncher_5.15.7_all.deb
-sudo dpkg -I ulauncher_5.15.7_all.deb
+sudo dpkg -i ulauncher_5.15.7_all.deb
 sudo apt-get install -f
+
+
