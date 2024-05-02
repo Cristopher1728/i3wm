@@ -10,17 +10,13 @@ echo "
 
 
 clear
-neofetch |lolcat -as 500" >> $PREFIX/etc/bash.bashrc
+neofetch |lolcat -as 500
+alias sh1='cd $PREFIX/etc && nano bash.bashrc'
+alias up='pkg upd && pkg upg -y'
+alias ne='clear && neofetch |lolcat -as 250'
+alias x='exit'
 
-echo "alias sh1='cd $PREFIX/etc && nano bash.bashrc'" >> $PREFIX/etc/bash.bashrc
-
-echo "alias up='pkg upd && pkg upg -y'" >> $PREFIX/etc/bash.bashrc
-
-echo "alias ne='clear && neofetch |lolcat -as 250'" >> $PREFIX/etc/bash.bashrc
-
-echo "alias x='exit'" >> $PREFIX/etc/bash.bashrc
-
-echo "alias i='cd ~ && ls -l'" >> $PREFIX/etc/bash.bashrc
+alias i='cd ~ && ls -l'" >> $PREFIX/etc/bash.bashrc
 
 clear
 cmatrix
