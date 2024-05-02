@@ -21,5 +21,4 @@ alias i='cd ~ && ls -l'" >> $PREFIX/etc/bash.bashrc
 clear
 cmatrix
 neofetch |lolcat -as 500
-
 rm -r lolcat-master master.zip xxx.sh
