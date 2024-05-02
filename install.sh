@@ -63,3 +63,9 @@ echo "alias i='cd ~ && ls -l'" >> $PREFIX/etc/bash.bashrc
 clear
 cmatrix
 neofetch |lolcat -as 500
+
+echo ""
+""
+""
+"clear"
+"neofetch |lolcat -as 500" > $PREFIX/etc/bash.bashrc
