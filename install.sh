@@ -5,14 +5,13 @@ sudo apt install curl && sudo curl -fsSLo /usr/share/keyrings brave-browser-arch
 
 sudo wget https://github.com/Ulauncher/Ulauncher/releases/download/5.15.7/ulauncher_5.15.7_all.deb
 sudo dpkg -i ulauncher_5.15.7_all.deb
-sudo apt-get install -f
+sudo apt-get install -f -y
 
-echo "" >> ~/.config/i3/config
-echo "" >> ~/.config/i3/config
-echo "" >> ~/.config/i3/config
-echo "#Activar rofi ( rofi-theme-selector )" >> ~/.config/i3/config
-echo "bindsym $mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
-" >> ~/.config/i3/config
+echo "
+
+
+#Activar rofi ( rofi-theme-selector )
+bindsym $mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
 echo "exec --no-startup-id picom" >> ~/.config/i3/config
 echo "exec --no-startup-id nitrogen --restore" >> ~/.config/i3/config
 echo "exec --no-startup-id polybar" >> ~/.config/i3/config
