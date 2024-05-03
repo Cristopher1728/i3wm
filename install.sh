@@ -23,7 +23,7 @@ gaps outer 0
 gaps inner 7
 
 #Grosor de las lineas de las ventanas
-for_window [class="^.*"] border pixel 3
+for_window [class='^.*'] border pixel 3
 
 #class                                border            backgr.             text            indicador        child_border
 
