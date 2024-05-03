@@ -37,7 +37,7 @@ client.urgent                      #2f343a         #900000        #ffffff       
 
 client.placeholder             #000000        #0c0c0c         #ffffff          #000000         #00FFFF
 
-client.background #ffffff"
+client.background #ffffff" >> ~/.config/i3/config
 
 echo "" >> $PREFIX/etc/bash.bashrc
 echo "" >> $PREFIX/etc/bash.bashrc
