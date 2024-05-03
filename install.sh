@@ -39,28 +39,18 @@ client.placeholder             #000000        #0c0c0c         #ffffff          #
 
 client.background #ffffff" >> ~/.config/i3/config
 
-echo "" >> $PREFIX/etc/bash.bashrc
-echo "" >> $PREFIX/etc/bash.bashrc
-echo "" >> $PREFIX/etc/bash.bashrc
-echo "clear" >> $PREFIX/etc/bash.bashrc
-echo "neofetch |lolcat -as 500" >> $PREFIX/etc/bash.bashrc
+echo "
 
-echo "alias sh1='cd $PREFIX/etc && nano bash.bashrc'" >> $PREFIX/etc/bash.bashrc
 
-echo "alias up='pkg upd && pkg upg -y'" >> $PREFIX/etc/bash.bashrc
+clear
+neofetch |lolcat -as 500
 
-echo "alias ne='clear && neofetch |lolcat -as 250'" >> $PREFIX/etc/bash.bashrc
-
-echo "alias x='exit'" >> $PREFIX/etc/bash.bashrc
-
-echo "alias i='cd ~ && ls -l'" >> $PREFIX/etc/bash.bashrc
+alias sh1='cd $PREFIX/etc && nano bash.bashrc'
+alias up='pkg upd && pkg upg -y'
+alias ne='clear && neofetch |lolcat -as 500'
+alias x='exit'
+alias i='cd ~ && ls -l'" >> $PREFIX/etc/bash.bashrc
 
 clear
 cmatrix
 neofetch |lolcat -as 500
-
-echo ""
-""
-""
-"clear"
-"neofetch |lolcat -as 500" > $PREFIX/etc/bash.bashrc
