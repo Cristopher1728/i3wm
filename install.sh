@@ -12,7 +12,7 @@ echo "
 
 #Activar rofi ( rofi-theme-selector )
 bindsym $mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
-echo "exec --no-startup-id picom" >> ~/.config/i3/config
+exec --no-startup-id picom
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id polybar
 exec --no-startup-id ulauncher
