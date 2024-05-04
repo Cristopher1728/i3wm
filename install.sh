@@ -10,7 +10,7 @@ echo "
 
 
 #Activar rofi ( rofi-theme-selector )
-bindsym '$mod+d' exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
+bindsym $mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
 exec --no-startup-id picom
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id polybar
