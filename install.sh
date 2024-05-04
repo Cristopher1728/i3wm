@@ -1,6 +1,6 @@
-sudo apt install chromium chromium-l10n suckless-tools i3blocks nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme blueman vokoscreen lolcat psensor polybar tilix neofetch htop btop glances xarchiver pcmanfm synaptic gparted libreoffice gimp vlc conky conky-all
+sudo apt install curl chromium chromium-l10n suckless-tools i3blocks nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme blueman vokoscreen lolcat psensor polybar tilix neofetch htop btop glances xarchiver pcmanfm synaptic gparted libreoffice gimp vlc conky conky-all
 
-sudo apt install curl && sudo curl -fsSLo /usr/share/keyrings brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list && sudo apt update && sudo apt install brave-browser
+sudo curl -fsSLo /usr/share/keyrings brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list && sudo apt update && sudo apt install brave-browser
 
 sudo wget https://github.com/Ulauncher/Ulauncher/releases/download/5.15.7/ulauncher_5.15.7_all.deb
 sudo dpkg -i ulauncher_5.15.7_all.deb
@@ -10,7 +10,7 @@ echo "
 
 
 #Activar rofi ( rofi-theme-selector )
-bindsym $mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
+bindsym '$mod+d' exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
 exec --no-startup-id picom
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id polybar
@@ -45,7 +45,7 @@ clear
 neofetch |lolcat -as 500
 
 alias sh1='cd $PREFIX/etc && nano bash.bashrc'
-alias up='pkg upd && pkg upg -y'
+alias up='apt update && apt upgrade -y'
 alias ne='clear && neofetch |lolcat -as 500'
 alias x='exit'
 alias i='cd ~ && ls -l'" >> $PREFIX/etc/bash.bashrc
