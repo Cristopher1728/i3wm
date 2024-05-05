@@ -1,4 +1,4 @@
-sudo apt install curl suckless-tools i3blocks nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat psensor polybar tilix neofetch htop btop glances xarchiver pcmanfm synaptic gparted conky conky-all
+sudo apt install curl suckless-tools i3blocks nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor polybar tilix neofetch htop btop glances xarchiver pcmanfm synaptic gparted conky conky-all
 
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
@@ -15,7 +15,7 @@ echo "
 
 
 #Activar rofi ( rofi-theme-selector )
-bindsym '$mod+d' exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
+bindsym mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
 exec --no-startup-id picom
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id polybar
@@ -27,7 +27,7 @@ gaps outer 0
 gaps inner 7
 
 #Grosor de las lineas de las ventanas
-for_window [class='^.*'] border pixel 3
+for_window [class='^.*'] border pixel 4
 
 #class                                border            backgr.             text            indicador        child_border
 
