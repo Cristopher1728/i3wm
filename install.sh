@@ -55,6 +55,8 @@ alias ne='clear && neofetch |lolcat -as 500'
 alias x='exit'
 alias i='cd ~ && ls -l'" >> $PREFIX/etc/bash.bashrc
 
+mv .conkyrc ~
+
 clear
 cmatrix
 neofetch |lolcat -as 500
