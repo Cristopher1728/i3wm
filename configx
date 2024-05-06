@@ -1,0 +1,336 @@
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+default_orientation vertical
+
+set $mod Mod4
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+#font pango:monospace 8
+font pango:monospace,font Awesome 8
+
+
+
+# This font is widely installed, provides lots of unicode glyphs, right-to-left
+# text rendering and scalability on retina/hidpi displays (thanks to pango).
+#font pango:DejaVu Sans Mono 8
+
+# The combination of xss-lock, nm-applet and pactl is a popular choice, so
+# they are included here as an example. Modify as you see fit.
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# NetworkManager is the most popular way to manage wireless networks on Linux,
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+exec --no-startup-id nm-applet
+
+# Use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+bindsym $mod+Return exec xterm
+
+# kill focused window
+bindsym $mod+Shift+q split toggle kill
+
+# Definimos el tema y los atajos de teclado para el funcionamiento de Rofi. Si cuando Rofi está abierto presionamos Shift+cursores derecha e izquierda obtendremos funcionalidades adicionales.
+set $rofi_theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+bindsym Ctrl+space exec rofi -show run -config $rofi_theme -font "System San Francisco Display 15"
+bindsym Ctrl+Shift+space exec rofi -show window -config $rofi_theme
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec --no-startup-id dmenu_run
+
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+ntilde focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+ntilde move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split in horizontal orientation
+bindsym $mod+h split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# Dar un nombre a los distintos espacios de trabajo o escritorios virtuales
+#set $workspace1 "1: Terminal "
+#set $workspace2 "2: Navegación "
+#set $workspace3 "3: Edición "
+#set $workspace4 "4: Music "
+#set $workspace5 "5: Chat "
+#set $workspace6 "6: Email "
+#set $workspace7 "7: Folders "
+#set $workspace8 "8" 
+#set $workspace9 "9"a
+#set $workspace10 "10"
+set $workspace1 "1: Correo "
+set $workspace2 "2: Notas "
+set $workspace3 "3: Archivos "
+set $workspace4 "4: Mensajería "
+set $workspace5 "5: Firefox "
+set $workspace6 "6: Trabajo"
+set $workspace7 "7: Trabajo"
+set $workspace8 "8: Trabajo" 
+set $workspace9 "9: Trabajo"
+set $workspace10 "10: Terminal "
+
+# Para irse a un espacio de trabajo determinado tecla Win + Número de espacio que queremos ir
+#bindsym $mod+1 workspace $workspace1 exec --no-startup-id feh --bg-fill ~/Todo/3-Fotos/Fondos/bosque.jpg
+bindsym $mod+1 workspace $workspace1 
+bindsym $mod+2 workspace $workspace2 
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+#bindsym $mod+7 workspace $workspace7 exec --no-startup-id feh --bg-fill ~/Todo/3-Fotos/Fondos/f.png
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
+
+# Irse a un espacio de trabajo determinado usando el teclado numérico
+bindsym $mod+Mod2+KP_1 workspace $workspace1
+bindsym $mod+Mod2+KP_2 workspace $workspace2
+bindsym $mod+Mod2+KP_3 workspace $workspace3
+bindsym $mod+Mod2+KP_4 workspace $workspace4
+bindsym $mod+Mod2+KP_5 workspace $workspace5
+bindsym $mod+Mod2+KP_6 workspace $workspace6
+bindsym $mod+Mod2+KP_7 workspace $workspace7
+bindsym $mod+Mod2+KP_8 workspace $workspace8
+bindsym $mod+Mod2+KP_9 workspace $workspace9
+bindsym $mod+Mod2+KP_0 workspace $workspace10
+
+# Para mover una ventana activa al espacio de treabajo que queremos. Win+Shift+Número_de_espacio_de_trabajo
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+Shift+10 move container to workspace $workspace10
+
+# Hacer que un programa determinado se abra en un espacio de trabajo determinado. Con el comando xprop podremos averiguar la class de cada uno de los programas.
+#assign [class="xterm"] $workspace10
+assign [class="Evolution"] $workspace1
+assign [class="telegram-desktop"] $workspace4
+assign [class="Zim"] $workspace2
+#assign [class="XTerm" title="Agenda"] $workspace10
+#assign [class="XTerm" title="Estudio"] $workspace10
+#assign [class="Pcmanfm"] $workspace5
+#assign [class="Gnome-calendar"] $workspace10
+
+#workspace10 output HDMI-0
+workspace1 output eDP-1-1
+workspace2 output eDP-1-1
+workspace3 output eDP-1-1 
+workspace4 output eDP-1-1
+workspace5 output eDP-1-1
+workspace6 output eDP-1-1
+workspace7 output HDMI-0
+workspace8 output HDMI-0
+workspace9 output HDMI-0
+workspace10 output HDMI-0
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym ntilde resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Configuración de colores mostrados en pantalla
+set $bg-color	         #2e3436
+set $border-focus	 #8c8c8c
+set $inactive-bg-color   #2e3436
+set $text-color          #d5c4a1
+set $inactive-text-color #93a1a1
+set $urgent-bg-color     #E53935
+set $blue-color          #5DA8F4
+
+# Colores de las ventanas
+client.unfocused      #002B36  #002B36   #d5c4a1
+client.focused        #FDF6E3  #FDF6E3   #002B36
+client.urgent         #0D47A1  #0D47A1   #BFBFBF 
+
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+        #status_command i3status
+        position top
+        workspace_min_width 40
+        
+         # Bar colors
+        colors {
+		background $bg-color
+	    	separator #757575
+		#                  border             background         text
+		focused_workspace  $bg-color          $bg-color          $text-color
+		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+	    	urgent_workspace   $blue-color        $blue-color        $text-color
+        }
+}
+
+# Atajos de teclado para lanzar programas.
+#bindsym $mod+Shift+f exec firefox-esr
+bindsym $mod+Shift+f exec ~/bin/firefox/firefox
+bindsym $mod+Shift+p exec pcmanfm ~/Todo/1-Documentos/Cursos/UNED
+#bindsym $XF86Calculator gnome-calculator
+
+
+
+# Seleccionar las aplicaciones que arrancan al iniciar i3
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id evolution
+exec --no-startup-id flameshot
+exec --no-startup-id keepassxc
+exec --no-startup-id kdeconnect-indicator
+exec --no-startup-id zim
+#exec --no-startup-id pasystray
+#exec --no-startup-id gnome-calendar
+#exec --no-startup-id mate-power-manager
+#exec --no-startup-id pcmanfm
+#exec --no-startup-id xterm -title "Estudio" -geometry 63x59-15+50 -e nano ~/Todo/2-Notas/Notas/ZIM/Estudio.txt >/dev/null
+#exec --no-startup-id ~/.monitor.sh
+#exec --no-startup-id xterm -title "Agenda" -geometry 170x59+10+50 -hold -e calcurse >/dev/null
+
+#exec --no-startup-id feh --bg-fill ~/Todo/3-Fotos/Fondos/bosque.jpg --bg-fill --screen HDMI-0
+#exec --no-startup-id feh --bg-fill ~/Todo/3-Fotos/Fondos/f.png --bg-fill --screen eDP-1-1
+
+# Hacer que la ventana de redacción de un email en thunderbird se abra en modo flotante "para ver las clases de las ventanas podemos usar xprop"
+for_window [class="scrcpy"] floating enable
+for_window [class="ffplay"] floating enable
+for_window [window_role="Msgcompose" class="(?i)evolution"] floating enable
+for_window [window_role="ECompEditorEvent" class="(?i)evolution"] floating enable
+for_window [class="KeePassXC"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Arandr"] floating enable resize set 900 500
+for_window [class="Evolution-alarm-notify"] floating enable
+for_window [class="XTerm"] floating enable
+for_window [class="vlc"] floating enable
+for_window [class="mpv"] floating enable
+for_window [class="gnome-calculator"] floating enable
+for_window [class="JDownloader"] floating enable 
+for_window [class="Ventana"] floating enable
+for_window [class="Visual"] floating enable
+#for_window [WM_NAME(STRING) = "Cita: Sin resumen" class="Cita: Sin resumen" class="evolution"] floating enable
+for_window [class="Kodi"] floating enable resize set 1366 768
+for_window [class="Yad"] floating enable
+#for_window [class="XTerm" title="Agenda"] move container to workspace $workspace8
+
+# Hacer que se active el teclado númerico cada que que se rearranque el gestor de ventanas i3. Hay que tener instalado el paquete numlockx
+exec_always --no-startup-id numlockx on
+
+# Para establecer un fondo escritorio cada vez que se arranque o rearranque i3. "sudo apt install feh"
+exec_always --no-startup-id feh --randomize --bg-scale --slideshow-delay 1 ~/Todo/3-Fotos/Fondos/* 
+
+# Para cerrar el ordenador presionar la combinación de teclas Ctrl+Alt+S
+bindsym $mod+mod1+p exec  /sbin/poweroff
+bindsym $mod+mod1+e exec i3-msg exit
+bindsym $mod+mod1+r exec  /sbin/reboot
+#bindsym $mod+mod1+l exec dm-tool lock 
+
+bindsym $mod+mod1+l exec i3lock -c 000000
+
+bindsym $mod+mod1+t exec --no-startup-id ~/Todo/1-Documentos/Cursos/Proyectos/Linux/Scripts/.teclado.sh
+bindsym $mod+mod1+m exec --no-startup-id ~/Todo/1-Documentos/Cursos/Proyectos/Linux/Scripts/.monitor.sh
+bindsym $mod+mod1+n exec --no-startup-id ~/Todo/1-Documentos/Cursos/Proyectos/Linux/Scripts/.monitor0.sh
+bindsym $mod+mod1+w exec --no-startup-id ~/Todo/1-Documentos/Cursos/Proyectos/Linux/Scripts/.vpn.sh
+bindsym $mod+mod1+s exec --no-startup-id ~/Todo/1-Documentos/Cursos/Proyectos/Linux/Scripts/.suspend.sh
+bindsym $mod+z exec flameshot gui
+#bindsym $mod+mod1+f exec flameshot full -p ~/Todo/3-Fotos/Temporal/cap
+bindsym $mod+mod1+f exec import -window 0x1c0017e ~/Todo/3-Fotos/Temporal/cap/firefox_screenshot.png
+#bindsym $mod+mod1+t exec adb connect 192.168.1.122:5555, scrcpy --bit-rate 2M --max-size 800
+bindsym $mod+End exec --no-startup-id import -window root $(date +%Y-%m-%d-%M-%S).png
+bindsym $mod+Print exec --no-startup-id import -window root $(date +%Y-%m-%d-%M-%S).png
+
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [class="Yad"] floating enable
+
+for_window [class=".*"] split toggle 
+
+exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 600 'i3exit lock'
