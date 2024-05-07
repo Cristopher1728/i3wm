@@ -1,6 +1,6 @@
 termux-setup-storage
 pkg update && pkg -y upgrade
-pkg install ruby wget neofetch htop w3m sc mc cmatrix -y
+pkg install ruby wget fastfetch vim htop w3m sc mc cmatrix -y
 wget https://github.com/busyloop/lolcat/archive/master.zip
 unzip master.zip
 cd lolcat-master/bin
@@ -10,7 +10,7 @@ echo "
 
 
 clear
-neofetch |lolcat -as 500
+fastfetch |lolcat -as 500
 alias sh1='cd $PREFIX/etc && nano bash.bashrc'
 alias up='pkg upd && pkg upg -y'
 alias ne='clear && neofetch |lolcat -as 250'
@@ -20,4 +20,4 @@ alias i='cd ~ && ls -l'" >> $PREFIX/etc/bash.bashrc
 
 clear
 cmatrix
-neofetch |lolcat -as 500
+fastfetch |lolcat -as 500
