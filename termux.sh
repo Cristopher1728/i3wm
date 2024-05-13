@@ -13,7 +13,7 @@ clear
 fastfetch |lolcat -as 500
 alias sh1='cd $PREFIX/etc && nano bash.bashrc'
 alias up='pkg upd && pkg upg -y'
-alias ne='clear && neofetch |lolcat -as 250'
+alias ne='clear && fastfetch |lolcat -as 250'
 alias x='exit'
 
 alias i='cd ~ && ls -l'" >> $PREFIX/etc/bash.bashrc
