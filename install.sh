@@ -1,4 +1,4 @@
-sudo apt install curl suckless-tools i3blocks nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor polybar tilix neofetch htop btop glances xarchiver pcmanfm synaptic gparted conky conky-all lxpolkit
+sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor polybar tilix neofetch htop btop glances xarchiver pcmanfm synaptic gparted conky conky-all lxpolkit
 
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
