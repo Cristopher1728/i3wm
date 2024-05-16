@@ -103,7 +103,7 @@ uppercase no
 
 TEXT
 $hr
-${alignc}Loc-OS Linux
+${alignc}Cristopher Is GNU Linux
 ${alignc}${color8}${font DejaVu Sans:size=35}${time %H:%M:%S} ${font} ${color}
 ${alignc}${time %a %d %b}
 ${alignc}Uptime: $uptime
