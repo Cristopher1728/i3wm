@@ -50,11 +50,12 @@ echo "
 clear
 neofetch |lolcat -as 500
 
-alias sh1='cd $PREFIX/etc && nano bash.bashrc'
+alias sh1='sudo nano -m -l ~/.bashrc'
 alias up='sudo apt update && sudo apt upgrade -y'
 alias ne='clear && neofetch |lolcat -as 500'
 alias x='exit'
-alias i='cd ~ && ls -l'" >> ~/.bashrc
+alias i='cd ~ && ls -la'
+alias i3='sudo nano -m -l  ~/.config/i3/config'" >> ~/.bashrc
 
 mv .conkyrc ~
 
