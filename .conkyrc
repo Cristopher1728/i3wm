@@ -33,7 +33,7 @@ own_window_transparent no
 own_window_hints undecorated,below,sticky,skip_taskbar
 own_window_type override
 own_window_argb_visual yes
-own_window_argb_value 150
+own_window_argb_value 170
 
 # Text alpha when using Xft
 xftalpha 1.0
