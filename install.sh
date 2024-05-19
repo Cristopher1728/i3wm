@@ -1,5 +1,5 @@
 #Iniciando Instalación . . .
-echo "Inicinado Instalació de paquetes Necesarios . . ."
+echo "Inicinado Instalación de paquetes Necesarios . . ."
 sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor polybar tilix neofetch htop btop glances xarchiver pcmanfm synaptic gparted conky conky-all lxpolkit
 
 echo "Instalando BRAVE BROWSER . . ."
