@@ -64,8 +64,8 @@ alias i3='sudo nano -m -l  ~/.config/i3/config'" >> ~/.bashrc
 mv .conkyrc ~
 
 #Estableciendo Fondo de Pantalla
-cp casa.jpg casa1.jpg casa2.jpg /usr/share/backgrounds
-exec --no-startup-id feh --bg-scale /usr/share/casa1.jpg
+sudo cp *.* /usr/share/backgrounds
+exec --no-startup-id feh --bg-scale /usr/share/otoño.jpg
 
 cmatrix
 neofetch |lolcat -as 500
