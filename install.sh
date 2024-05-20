@@ -1,5 +1,5 @@
 #Iniciando Instalación . . .
-echo "Inicinado Instalación de paquetes Necesarios . . ."
+echo "Inicinado Instalación de paquetes Necesarios . . . "
 sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor polybar tilix neofetch htop btop glances xarchiver pcmanfm synaptic gparted conky conky-all lxpolkit
 
 echo "Instalando BRAVE BROWSER . . ."
@@ -54,18 +54,19 @@ echo "
 clear
 neofetch |lolcat -as 500
 
-alias sh1='sudo nano -m -l ~/.bashrc'
+alias sh1='sudo nano -l ~/.bashrc'
 alias up='sudo apt update && sudo apt upgrade -y'
 alias ne='clear && neofetch |lolcat -as 500'
 alias x='exit'
 alias i='cd ~ && ls -la'
-alias i3='sudo nano -m -l  ~/.config/i3/config'" >> ~/.bashrc
+alias nanno='sudo nano -l'
+alias i3='sudo nano -l  ~/.config/i3/config'" >> ~/.bashrc
 
 mv .conkyrc ~
 
 #Estableciendo Fondo de Pantalla
-sudo cp *.* /usr/share/backgrounds
-exec --no-startup-id feh --bg-scale /usr/share/otoño.jpg
+sudo mv backgrounds /usr/share
+sudo mv bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
 
 cmatrix
 neofetch |lolcat -as 500
