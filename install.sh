@@ -1,6 +1,9 @@
 #Iniciando Instalación . . .
 echo "Inicinado Instalación de paquetes Necesarios . . . "
-sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor polybar tilix neofetch htop btop glances xarchiver pcmanfm synaptic gparted conky conky-all lxpolkit
+#Paquetes basicos para el sistema
+sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor polybar neofetch htop btop glances xarchiver pcmanfm synaptic gparted conky conky-all blueman lxpolkit
+#Paquetes Más usados
+sudo apt install chromium chromium-l10n libreoffice libreoffice-l10n-es gimp vlc telegram-desktop
 
 nitrogen
 
