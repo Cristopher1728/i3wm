@@ -1,11 +1,16 @@
 #Iniciando Instalación . . .
 echo "Inicinado Instalación de paquetes Necesarios . . . "
 #Paquetes basicos para el sistema
-sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor polybar neofetch htop btop glances xarchiver pcmanfm synaptic gparted conky conky-all blueman lxpolkit
+sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor polybar neofetch htop btop glances xarchiver pcmanfm synaptic gparted conky conky-all gthumb blueman lxpolkit telegram-desktop snapd
 #Paquetes Más usados
-sudo apt install chromium chromium-l10n libreoffice libreoffice-l10n-es gimp vlc telegram-desktop
+sudo apt install chromium chromium-l10n libreoffice libreoffice-l10n-es gimp vlc notepadqq kate
 
 nitrogen
+
+#Instalación Whatsdesk
+echo "Instalando de Whatsdesk"
+sudo snap install core
+sudo snap install whatsdesk
 
 echo "Instalando BRAVE BROWSER . . ."
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
@@ -16,9 +21,9 @@ sudo apt update
 sudo apt install brave-browser
 
 echo "Instalando ULAUNCHER . . ."
-sudo wget https://github.com/Ulauncher/Ulauncher/releases/download/5.15.7/ulauncher_5.15.7_all.deb
-sudo dpkg -i ulauncher_5.15.7_all.deb
-sudo apt-get install -f -y
+sudo add-apt-repository universe -y
+sudo add-apt-repository ppa:agornostal/ulauncher -y
+sudo apt update && sudo apt install ulauncher
 
 echo "
 
@@ -37,7 +42,7 @@ gaps outer 0
 gaps inner 7
 
 #Grosor de las lineas de las ventanas
-for_window [class='^.*'] border pixel 4
+for_window [class='^.*'] border pixel 3
 
 #class                                border            backgr.             text            indicador        child_border
 
