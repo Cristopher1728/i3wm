@@ -44,7 +44,7 @@ exec --no-startup-id ulauncher
 exec --no-startup-id conky
 
 #Ejecutar espaciado entre ventanas
-gaps outer 0
+gaps outer 2
 gaps inner 7
 
 #Grosor de las lineas de las ventanas
