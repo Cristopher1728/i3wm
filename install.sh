@@ -71,6 +71,8 @@ echo "
 clear
 neofetch |lolcat -as 500
 
+PATH=$PATH:/snap/bin
+
 alias sh1='sudo nano -l -$ ~/.bashrc'
 alias up='sudo apt update && sudo apt upgrade -y'
 alias ne='clear && neofetch |lolcat -as 500'
