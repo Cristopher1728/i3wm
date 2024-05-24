@@ -1,5 +1,5 @@
 #Iniciando Instalación . . .
-echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . ."
+echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \[\033[01;32m\]"
 #Paquetes basicos para el sistema
 sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor polybar neofetch htop btop glances xarchiver pcmanfm synaptic gparted conky conky-all gthumb blueman lxpolkit telegram-desktop snapd -y
 #Paquetes Más usados
@@ -7,14 +7,15 @@ sudo apt install chromium chromium-l10n libreoffice libreoffice-l10n-es gimp vlc
 #Si no funciona la install de Ulauncher falta instalar este paquete
 #software-properties-common
 
+
 nitrogen
 
 #Instalación Whatsdesk
-echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Instalando WHATSDESK"
+echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Instalando WHATSDESK \[\033[01;32m\]"
 sudo snap install core
 sudo snap install whatsdesk
 
-echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Instalando BRAVE-BROWSER"
+echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Instalando BRAVE-BROWSER \[\033[01;32m\]"
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
@@ -22,7 +23,7 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] http
 sudo apt update
 sudo apt install brave-browser
 
-echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Instalando ULAUNCHER"
+echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Instalando ULAUNCHER \[\033[01;32m\]"
 sudo apt update && sudo apt install -y gnupg
 gpg --keyserver keyserver.ubuntu.com --recv 0xfaf1020699503176
 gpg --export 0xfaf1020699503176 | sudo tee /usr/share/keyrings/ulauncher-archive-keyring.gpg > /dev/null
@@ -33,7 +34,7 @@ sudo apt update && sudo apt install ulauncher
 
 echo "
 
-echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo CONFIG de i3wm"
+echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo CONFIG de i3wm \[\033[01;32m\]"
 #Activar rofi ( rofi-theme-selector )
 bindsym mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
 exec --no-startup-id lxpolkit
@@ -65,7 +66,7 @@ client.placeholder             #000000        #0c0c0c         #ffffff          #
 client.background #ffffff" >> ~/.config/i3/config
 
 
-echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo .bashrc"
+echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo .bashrc \[\033[01;32m\]"
 echo "
 
 
@@ -84,7 +85,7 @@ alias i3='sudo nano -l -$  ~/.config/i3/config'" >> ~/.bashrc
 
 mv .conkyrc ~
 
-echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN"
+echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN \[\033[01;32m\]"
 
 #Estableciendo Fondo de Pantalla
 sudo mv backgrounds /usr/share
@@ -94,5 +95,4 @@ cmatrix
 neofetch |lolcat -as 500
 
 #Terminando la Instalación
-echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Instalación Finalizada, modifique detalles menores en archivo /home/user/config y REINICIE EL EQUIPO . . . . ."
-
+echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Instalación Finalizada, modifique detalles menores en archivo /home/user/config y REINICIE EL EQUIPO . . . . . \[\033[01;32m\]"
