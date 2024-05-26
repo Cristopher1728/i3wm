@@ -24,7 +24,7 @@ gpg --export 0xfaf1020699503176 | sudo tee /usr/share/keyrings/ulauncher-archive
 echo "deb [signed-by=/usr/share/keyrings/ulauncher-archive-keyring.gpg] \
           http://ppa.launchpad.net/agornostal/ulauncher/ubuntu jammy main" \
           | sudo tee /etc/apt/sources.list.d/ulauncher-jammy.list
-sudo apt update && sudo apt install ulauncher
+sudo apt update && sudo apt install ulauncher -y
 
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo CONFIG de i3wm . . . \e[1;39;49m"
 
@@ -33,6 +33,8 @@ echo "
 
 #Activar rofi ( rofi-theme-selector )
 bindsym mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
+
+#Paquetes que se ejecutan al Inicio
 exec --no-startup-id lxpolkit
 exec --no-startup-id picom
 exec --no-startup-id nitrogen --restore
@@ -81,7 +83,7 @@ alias i3='sudo nano -l -$  ~/.config/i3/config'" >> ~/.bashrc
 
 mv .conkyrc ~
 
-#Estableciendo Fondo de Pantalla
+#Mover archivos de configuración a la carpeta de Nitrogen - Pantalla
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN . . . \e[1;39;49m"
 sudo mv backgrounds /usr/share
 sudo mv bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
