@@ -1,3 +1,8 @@
+#!/bin/bash
+# Creador: Cristhian Gabriel BONILLA BARRIOS <cristiano1728@gmail.com>
+# Script que instala paquetes adicionales y pre-configura i3wm en Debian y Derivados.
+#==============================================================\
+
 #Iniciando Instalación . . .
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \e[1;39;49m"
 #Paquetes basicos para el sistema
@@ -68,7 +73,7 @@ echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo b
 echo "
 
 
-PS1='\e[1;39;49m\e[1;38;41m┌┼─┼─\e[1;38;42m[🕞\d\e[1;38;44m📱Cristopher📲\e[1;38;40m㉿\e[1;38;45m🌎\H]\e[1;39;49m\n\e[1;38;41m├┼─┼─\e[1;31;49m┼┼》[\@][\e[1;32;49m📁\w\e[1;31;49m]\e[1;39;49m\n\e[1;38;41m└┼─┼─\e[1;31;49m┼┼》\e[1;32;49m'
+export PS1='\e[1;39;49m\e[1;38;41m┌┼─┼─\e[1;38;42m[🕞\d\e[1;38;44m📱Cristopher📲\e[1;38;40m㉿\e[1;38;45m🌎\H]\e[1;39;49m\n\e[1;38;41m├┼─┼─\e[1;31;49m┼┼》[\@][\e[1;32;49m📁\w\e[1;31;49m]\e[1;39;49m\n\e[1;38;41m└┼─┼─\e[1;31;49m┼┼》\e[1;32;49m'
 
 clear
 neofetch |lolcat -as 500

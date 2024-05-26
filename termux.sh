@@ -13,6 +13,8 @@ echo -e "\x1b[1;37m\x1b[45m* 🌎 ┼─┼┼┼─>> Integrando comandos en ba
 echo "
 
 
+export PS1='\e[1;39;49m\e[1;38;41m┌┼─┼─\e[1;38;42m[🕞\d\e[1;38;44m📱Cristopher📲\e[1;38;40m㉿\e[1;38;45m🌎\H]\e[1;39;49m\n\e[1;38;41m├┼─┼─\e[1;31;49m┼┼》[\@][\e[1;32;49m📁\w\e[1;31;49m]\e[1;39;49m\n\e[1;38;41m└┼─┼─\e[1;31;49m┼┼》\e[1;39;49m'
+
 clear
 fastfetch |lolcat -as 500
 alias sh1='cd $PREFIX/etc && nano bash.bashrc'
