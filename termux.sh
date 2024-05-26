@@ -16,11 +16,6 @@ unzip master.zip
 cd lolcat-master/bin
 gem install lolcat
 
-wget https://github.com/busyloop/lolcat/archive/master.zip
-unzip master.zip
-cd lolcat-master/bin
-gem install lolcat
-
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Integrando comandos en el archivo bash.bashrc. . . \e[1;39;49m"
 echo "
 
