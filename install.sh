@@ -69,11 +69,29 @@ client.placeholder             #000000        #0c0c0c         #ffffff          #
 client.background #ffffff" >> ~/.config/i3/config
 
 
-echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo bash.bashrc . . . \e[1;39;49m"
+echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo .bashrc del Usuario. . . \e[1;39;49m"
 echo "
 
 
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\u\[\033[01;33m\]㉿\[\033[01;34m\]\@][\[\033[01;33m\]\w\[\033[01;34m\]]\[\033[01;32m\]\$\n┼┼》'
+
+clear
+neofetch |lolcat -as 500
+
+alias sh1='sudo nano -l -$ ~/.bashrc'
+alias up='sudo apt update && sudo apt upgrade -y'
+alias ne='clear && neofetch |lolcat -as 500'
+alias x='exit'
+alias i='cd ~ && ls -la'
+alias nanno='sudo nano -l -$'
+alias i3='sudo nano -l -$  ~/.config/i3/config'" >> ~/.bashrc
+
+sudo su
+echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo bash.bashrc de /etc. . . \e[1;39;49m"
+echo "
+
+
+export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\u\[\033[01;33m\]㉿\[\033[01;31m\]\@][\[\033[01;33m\]\w\[\033[01;31m\]]\$\n┼┼》\[\033[01;34m\]'
 
 clear
 neofetch |lolcat -as 500
