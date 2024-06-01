@@ -86,7 +86,7 @@ alias i='cd ~ && ls -la'
 alias nanno='sudo nano -l -$'
 alias i3='sudo nano -l -$  ~/.config/i3/config'" >> ~/.bashrc
 
-sudo su
+
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo bash.bashrc de /etc. . . \e[1;39;49m"
 echo "
 
