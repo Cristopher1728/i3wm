@@ -73,7 +73,7 @@ echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo b
 echo "
 
 
-export PS1='\e[1;39;49m\e[1;38;41m┌┼─┼─\e[1;38;42m[🕞\d\e[1;38;44m📱Cristopher📲\e[1;38;40m㉿\e[1;38;45m🌎\H]\e[1;39;49m\n\e[1;38;41m├┼─┼─\e[1;31;49m┼┼》[\@][\e[1;32;49m📁\w\e[1;31;49m]\e[1;39;49m\n\e[1;38;41m└┼─┼─\e[1;31;49m┼┼》\e[1;32;49m'
+export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\u\[\033[01;33m\]㉿\[\033[01;34m\]\@][\[\033[01;33m\]\w\[\033[01;34m\]]\[\033[01;32m\]\$\n┼┼》'
 
 clear
 neofetch |lolcat -as 500
@@ -84,7 +84,7 @@ alias ne='clear && neofetch |lolcat -as 500'
 alias x='exit'
 alias i='cd ~ && ls -la'
 alias nanno='sudo nano -l -$'
-alias i3='sudo nano -l -$  ~/.config/i3/config'" >> ~/.bashrc
+alias i3='sudo nano -l -$  ~/.config/i3/config'" >> /etc/bash.bashrc
 
 mv .conkyrc ~
 
