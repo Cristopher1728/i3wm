@@ -7,7 +7,7 @@
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \e[1;39;49m"
 #Paquetes basicos para el sistema
 sudo apt update && upgrade -y
-sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor polybar neofetch htop btop glances xarchiver pcmanfm synaptic gparted conky conky-all gthumb blueman lxpolkit telegram-desktop -y
+sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor polybar neofetch htop btop glances xarchiver pcmanfm synaptic gparted conky conky-all gthumb blueman lxpolkit telegram-desktop connman connman-gtk -y
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
 #Paquetes Más usados
 sudo apt install chromium chromium-l10n libreoffice libreoffice-l10n-es gimp vlc notepadqq kate okular simplescreenrecorder -y
@@ -46,6 +46,7 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id polybar
 exec --no-startup-id ulauncher
 exec --no-startup-id conky
+exec --no-startup-id connman-gtk
 
 #Ejecutar espaciado entre ventanas
 gaps outer 2
