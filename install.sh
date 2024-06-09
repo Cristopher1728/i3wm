@@ -36,7 +36,7 @@ echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo C
 echo "
 
 
-#Activar rofi ( rofi-theme-selector )
+#Activar rofi ( seleccionar tema con: *rofi-theme-selector* )
 bindsym mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
 
 #Paquetes que se ejecutan al Inicio
@@ -74,7 +74,7 @@ echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo .
 echo "
 
 
-export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\u\[\033[01;33m\]㉿\[\033[01;34m\]\@][\[\033[01;33m\]\w\[\033[01;34m\]]\[\033[01;32m\]\$\n┼┼》'
+export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\u\[\033[01;33m\]㉿\[\033[01;34m\]\@][\[\033[01;33m\]\w\[\033[01;34m\]]\[\033[01;35m\]\$\n┼┼》'
 
 clear
 neofetch |lolcat -as 500
@@ -106,6 +106,9 @@ alias nanno='sudo nano -l -$'
 alias i3='sudo nano -l -$  ~/.config/i3/config'" >> /etc/bash.bashrc
 
 mv .conkyrc ~
+sudo rm -rf *.rasi /usr/share/rofi/themes
+sudo mv -r themes /usr/share/rofi
+mv -r rofi ~/.config
 
 #Mover archivos de configuración a la carpeta de Nitrogen - Pantalla
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN . . . \e[1;39;49m"
