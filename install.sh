@@ -8,7 +8,7 @@ echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Inicinado Instalación de paquet
 #Paquetes basicos para el sistema
 sudo apt update && upgrade -y
 sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor polybar neofetch htop btop glances xarchiver pcmanfm synaptic gparted conky conky-all gthumb blueman lxpolkit telegram-desktop -y
-echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
+#echo -e \e[1;37;45m* 🌎 ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
 #Paquetes Más usados
 #sudo apt install chromium chromium-l10n libreoffice libreoffice-l10n-es gimp vlc notepadqq kate okular simplescreenrecorder -y
 
@@ -87,8 +87,20 @@ alias i='cd ~ && ls -la'
 alias nanno='sudo nano -l -$'
 alias i3='sudo nano -l -$  ~/.config/i3/config'" >> ~/.bashrc
 
+mv .conkyrc ~
+sudo rm -rf *.rasi /usr/share/rofi/themes
+sudo mv themes /usr/share/rofi
+mv rofi ~/.config
+
+#Mover archivos de configuración a la carpeta de Nitrogen - Pantalla
+echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN . . . \e[1;39;49m"
+sudo mv backgrounds /usr/share
+sudo mv bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
+
+sudo apt install connman connman-gtk -y
 
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo bash.bashrc de /etc. . . \e[1;39;49m"
+su
 echo "
 
 
@@ -104,16 +116,6 @@ alias x='exit'
 alias i='cd ~ && ls -la'
 alias nanno='sudo nano -l -$'
 alias i3='sudo nano -l -$  ~/.config/i3/config'" >> /etc/bash.bashrc
-
-mv .conkyrc ~
-sudo rm -rf *.rasi /usr/share/rofi/themes
-sudo mv themes /usr/share/rofi
-mv rofi ~/.config
-
-#Mover archivos de configuración a la carpeta de Nitrogen - Pantalla
-echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN . . . \e[1;39;49m"
-sudo mv backgrounds /usr/share
-sudo mv bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
 
 cmatrix
 neofetch |lolcat -as 500
