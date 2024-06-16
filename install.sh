@@ -36,6 +36,41 @@ echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo C
 echo "
 
 
+
+bar {
+        status_command i3status
+        colors {
+                # background #222222ff
+                background #061b26
+                statusline #2290ff
+                separator #2290ff
+                #                   border  backgr. text
+                focused_workspace  #444444 #444444 #ff9f00
+                active_workspace   #333333 #5f676a #ffffff
+                inactive_workspace #333333 #222222 #888888
+                urgent_workspace   #2f343a #900000 #ffffff
+        }
+}
+
+
+#bar {
+#        mode dock
+#        position top
+#        status_command i3blocks
+#        height 25
+#        colors {
+#            # background #222222ff
+#            background #061b26
+#            statusline #ff00ff
+#            separator #186e97
+#            #                   border  backgr. text
+#            focused_workspace  #444444 #444444 #ff9f00
+#            active_workspace   #333333 #5f676a #ffffff
+#            inactive_workspace #333333 #222222 #888888
+#            urgent_workspace   #2f343a #900000 #ffffff
+#        }
+#}
+
 #Activar rofi ( seleccionar tema con: *rofi-theme-selector* )
 bindsym mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
 
@@ -43,7 +78,7 @@ bindsym mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -
 exec --no-startup-id lxpolkit
 exec --no-startup-id picom
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id polybar
+#exec --no-startup-id polybar
 exec --no-startup-id ulauncher
 exec --no-startup-id conky
 exec --no-startup-id connman-gtk
@@ -55,19 +90,14 @@ gaps inner 7
 #Grosor de las lineas de las ventanas
 for_window [class='^.*'] border pixel 3
 
-#class                                border            backgr.             text            indicador        child_border
+#class                            border         backgr.        text             indicador       child_border
+client.focused                    #bf7500        #285577        #ffffff          #ff7900         #ff7900
+client.focused_inactive           #33333         #5f676a        #ffffff          #484e50         #ff00ff
+client.unfocused                  #333333        #222222        #888888          #292d2e         #4794cb
+client.urgent                     #2f343a        #900000        #ffffff          #900000         #FF0000
+client.placeholder                #000000        #0c0c0c        #ffffff          #000000         #00FFFF
 
-client.focused                    #4c7899        #285577        #ffffff           #3BFF00          #3BFF00
-
-client.focused_inactive     #33333          #5f676a         #ffffff           #484e50         #FF00FF
-
-client.unfocused                #333333        #222222        #888888      #292d2e         #222222
-
-client.urgent                      #2f343a         #900000        #ffffff          #900000         #FF0000
-
-client.placeholder             #000000        #0c0c0c         #ffffff          #000000         #00FFFF
-
-client.background #ffffff" >> ~/.config/i3/config
+client.background #ff00ff" >> ~/.config/i3/config
 
 
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Comandos al archivo .bashrc del Usuario. . . \e[1;39;49m"
@@ -91,6 +121,7 @@ mv .conkyrc ~
 sudo rm -rf *.rasi /usr/share/rofi/themes
 sudo mv themes /usr/share/rofi
 mv rofi ~/.config
+sudo mv -f i3status.conf i3blocks.conf /etc
 
 #Mover archivos de configuración a la carpeta de Nitrogen - Pantalla
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN . . . \e[1;39;49m"
