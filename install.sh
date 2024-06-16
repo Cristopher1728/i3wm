@@ -38,6 +38,7 @@ echo "
 
 
 bar {
+	position top
         status_command i3status
         colors {
                 # background #222222ff
