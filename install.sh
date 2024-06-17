@@ -43,10 +43,10 @@ bar {
         colors {
                 # background #222222ff
                 background #061b26
-                statusline #2290ff
-                separator #2290ff
+                statusline #ff7900
+                separator #ff7900
                 #                   border  backgr. text
-                focused_workspace  #444444 #444444 #ff9f00
+                focused_workspace  #ff7900 #000000 #ff7900
                 active_workspace   #333333 #5f676a #ffffff
                 inactive_workspace #333333 #222222 #888888
                 urgent_workspace   #2f343a #900000 #ffffff
