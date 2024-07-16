@@ -7,7 +7,7 @@
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \e[1;39;49m"
 #Paquetes basicos para el sistema
 sudo dnf update
-sudo dnf install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix polybar neofetch htop btop glances xarchiver pcmanfm gparted conky gthumb blueman lxpolkit lightdm-gtk-greeter
+sudo dnf install curl nitrogen rofi lxappearance picom numlockx arc-theme papirus-icon-theme lolcat cmatrix polybar neofetch htop btop glances xarchiver pcmanfm gparted conky gthumb blueman lxpolkit lightdm-gtk-greeter
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
 #Paquetes Más usados
 sudo dnf install chromium libreoffice gimp vlc kate okular
@@ -91,11 +91,11 @@ echo "
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\u\[\033[01;33m\]㉿\[\033[01;34m\]\@][\[\033[01;33m\]\w\[\033[01;34m\]]\[\033[01;32m\]\$\n┼┼》\[\033[01;37m\]'
 
 clear
-neofetch |lolcat -as 500
+neofetch |lolcat
 
 alias sh1='sudo nano -l -$ ~/.bashrc'
 alias up='sudo apt update && sudo apt upgrade -y'
-alias ne='clear && neofetch |lolcat -as 500'
+alias ne='clear && neofetch |lolcat'
 alias x='exit'
 alias i='cd ~ && ls -la'
 alias nanno='sudo nano -l -$'
@@ -103,15 +103,16 @@ alias i3='sudo nano -l -$  ~/.config/i3/config'" >> ~/.bashrc
 
 mv .conkyrc ~
 sudo rm -rf *.rasi /usr/share/rofi/themes
-sudo mv themes /usr/share/rofi
-mv rofi ~/.config
+sudo mv -f themes /usr/share/rofi
+mv -f rofi ~/.config
 sudo mv -f i3status.conf i3blocks.conf /etc
 sudo mv -f lightdm-gtk-greeter.conf /etc/lightdm
 
 #Mover archivos de configuración a la carpeta de Nitrogen - Pantalla
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN . . . \e[1;39;49m"
-sudo mv backgrounds /usr/share
-sudo mv bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
+sudo rm -rf /usr/share/backgrounds
+sudo mv -f backgrounds /usr/share
+sudo mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
 
 cmatrix
 neofetch |lolcat
