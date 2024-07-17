@@ -111,6 +111,7 @@ sudo mv -f lightdm-gtk-greeter.conf /etc/lightdm
 #Mover archivos de configuración a la carpeta de Nitrogen - Pantalla
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN . . . \e[1;39;49m"
 sudo rm -rf /usr/share/backgrounds
+sudo mv -f fbackgrounds backgrounds
 sudo mv -f backgrounds /usr/share
 sudo mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
 
