@@ -9,7 +9,7 @@ sudo dnf update
 
 #Paquetes basicos para el sistema
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \e[1;39;49m"
-sudo dnf install curl nitrogen rofi lxappearance picom numlockx arc-theme papirus-icon-theme lolcat cmatrix polybar neofetch htop btop glances xarchiver pcmanfm gparted conky gthumb blueman lxpolkit lightdm-gtk-greeter
+sudo dnf install curl nitrogen rofi lxappearance picom numlockx arc-theme papirus-icon-theme lolcat cmatrix polybar neofetch htop btop glances xarchiver pcmanfm gparted conky gthumb blueman lightdm-gtk-greeter
 
 #Paquetes Más usados
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
@@ -123,7 +123,7 @@ alias i3='sudo nano -l -$  ~/.config/i3/config'" >> ~/.bashrc
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Configuración de ROFI y LIGHTDM . . . \e[1;39;49m"
 mv .conkyrc ~
 sudo rm -rf *.rasi /usr/share/rofi/themes
-sleep
+sleep 3
 sudo mv -f themes /usr/share/rofi
 mv -f rofi ~/.config
 sudo mv -f i3status.conf i3blocks.conf /etc
