@@ -18,6 +18,18 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 nitrogen
 
+echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Instalando Navegador Web BRAVE BROWSER, Navegador que elimina publicidad molesta. . . \e[1;39;49m"
+sudo dnf install dnf-plugins-core
+
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+
+sudo dnf install brave-browser
+
+echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Instalando Lanzador de Aplicaciones ULAUNCHER . . . \e[1;39;49m"
+sudo dnf install ulauncher
+
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Comandos al archivo CONFIG de i3wm . . . \e[1;39;49m"
 
 echo "
