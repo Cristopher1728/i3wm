@@ -4,13 +4,17 @@
 #==============================================================\
 
 #Iniciando Instalación . . .
-echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \e[1;39;49m"
-#Paquetes basicos para el sistema
+echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Actualizando el Sistema, Esto demora de acuerdo al tamaño de datos a actualizar . . . \e[1;39;49m"
 sudo dnf update
+
+#Paquetes basicos para el sistema
+echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \e[1;39;49m"
 sudo dnf install curl nitrogen rofi lxappearance picom numlockx arc-theme papirus-icon-theme lolcat cmatrix polybar neofetch htop btop glances xarchiver pcmanfm gparted conky gthumb blueman lxpolkit lightdm-gtk-greeter
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
 #Paquetes Más usados
-sudo dnf install chromium libreoffice gimp vlc kate okular
+sudo dnf install gnome-software chromium libreoffice gimp vlc kate okular
+
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 nitrogen
 
