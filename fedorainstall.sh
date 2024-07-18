@@ -112,24 +112,29 @@ clear
 neofetch |lolcat
 
 alias sh1='sudo nano -l -$ ~/.bashrc'
-alias up='sudo apt update && sudo apt upgrade -y'
+alias up='sudo dnf update'
 alias ne='clear && neofetch |lolcat'
 alias x='exit'
 alias i='cd ~ && ls -la'
 alias nanno='sudo nano -l -$'
 alias i3='sudo nano -l -$  ~/.config/i3/config'" >> ~/.bashrc
 
+#Mover archivos de configuración a la carpeta de Nitrogen - Fondo de Pantalla
+echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Configuración de ROFI y LIGHTDM . . . \e[1;39;49m"
 mv .conkyrc ~
 sudo rm -rf *.rasi /usr/share/rofi/themes
+sleep
 sudo mv -f themes /usr/share/rofi
 mv -f rofi ~/.config
 sudo mv -f i3status.conf i3blocks.conf /etc
 sudo mv -f lightdm-gtk-greeter.conf /etc/lightdm
 
-#Mover archivos de configuración a la carpeta de Nitrogen - Pantalla
+#Mover archivos de configuración a la carpeta de Nitrogen - Fondo de Pantalla
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN . . . \e[1;39;49m"
 sudo rm -rf /usr/share/backgrounds
+sleep 3
 sudo mv -f fbackgrounds backgrounds
+sleep 3
 sudo mv -f backgrounds /usr/share
 sudo mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
 
