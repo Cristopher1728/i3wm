@@ -118,6 +118,8 @@ alias i='cd ~ && ls -la'
 alias nanno='sudo nano -l -$'
 alias i3='sudo nano -l -$  ~/.config/i3/config'" >> ~/.bashrc
 
+#Mover archivos de configuración a la carpeta de Nitrogen - Fondo de Pantalla
+echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Configuración de ROFI y LIGHTDM . . . \e[1;39;49m"
 mv .conkyrc ~
 sudo rm -rf *.rasi /usr/share/rofi/themes
 sudo mv -f themes /usr/share/rofi

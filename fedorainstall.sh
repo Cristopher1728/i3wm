@@ -13,7 +13,7 @@ sudo dnf install curl nitrogen rofi lxappearance picom numlockx arc-theme papiru
 
 #Paquetes Más usados
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
-sudo dnf install gnome-software chromium libreoffice gimp vlc kate okular
+sudo dnf install gnome-software chromium libreoffice gimp vlc notepadqq kate okular simplescreenrecorder
 
 #Añadiendo repositorio de Flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
