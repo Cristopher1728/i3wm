@@ -13,9 +13,9 @@ echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Paquetes Adicionales para un Sist
 #Paquetes Más usados
 sudo pkg install chromium libreoffice gimp vlc kate okular simplescreenrecorder ulauncher
 
-echo "hald_enable="YES"" >> /etc/rc.conf
-echo "dbus_enable="YES"" >> /etc/rc.conf
-echo "slim_enable="YES"" >> /etc/rc.conf
+sudo sysrc hald_enable="YES"
+sudo sysrc dbus_enable="YES"
+sudo sysrc slim_enable="YES"
 
 echo "/usr/local/bin/i3" >> ~/.xinitrc
 
@@ -32,6 +32,8 @@ echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta 
 sudo mv -f bsdbackgrounds backgrounds
 sudo mv -f backgrounds /usr/share
 sudo mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
+mkdir ~/.config
+mkdir ~/.config/i3
 mv config ~/.config/i3/
 
 cmatrix
