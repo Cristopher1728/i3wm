@@ -25,6 +25,7 @@ mv .conkyrc ~
 # sudo rm -rf *.rasi /usr/share/rofi/themes
 sudo mkdir /usr/share/rofi/
 sudo mv -f themes /usr/share/rofi/
+mkdir ~/.config/rofi
 mv rofi ~/.config
 sudo mv -f i3status.conf i3blocks.conf /etc
 
@@ -32,11 +33,12 @@ sudo mv -f i3status.conf i3blocks.conf /etc
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN . . . \e[1;39;49m"
 sudo mv -f bsdbackgrounds backgrounds
 sudo mv -f backgrounds /usr/share
-sudo mkdir ~/.config/nitroge
+sudo mkdir ~/.config/nitrogen
 sudo mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
 mkdir ~/.config
 mkdir ~/.config/i3
 mv config ~/.config/i3/
+mv .shrc ~
 
 cmatrix
 neofetch |lolcat

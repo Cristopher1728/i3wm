@@ -1,0 +1,65 @@
+#
+# .shrc - bourne shell startup file 
+#
+# This file will be used if the shell is invoked for interactive use and
+# the environment variable ENV is set to this file.
+#
+# see also sh(1), environ(7).
+#
+
+
+# file permissions: rwxr-xr-x
+#
+# umask	022
+
+# Uncomment this to enable the builtin vi(1) command line editor in sh(1),
+# e.g. ESC to go into visual mode.
+# set -o vi
+
+
+# some useful aliases
+alias h='fc -l'
+alias j=jobs
+alias m="$PAGER"
+alias ll='ls -laFo'
+alias l='ls -l'
+alias g='egrep -i'
+ 
+# # be paranoid
+# alias cp='cp -ip'
+# alias mv='mv -i'
+# alias rm='rm -i'
+
+# # csh like history on arrow up and down
+bind ^[[A ed-search-prev-history
+bind ^[[B ed-search-next-history
+
+# # ctrl+arrow allow to jump from words to words
+bind "\\e[1;5C" em-next-word
+bind "\\e[1;5D" ed-prev-word
+alias history='fc -l'
+
+# Fix home/del for mobaxterm
+bind ^[[5~ ed-move-to-beg
+bind ^[[6~ ed-move-to-end
+
+# set prompt: ``username@hostname:directory $ '' 
+PS1="\u@\h:\w \\$ "
+
+# search path for cd(1)
+# CDPATH=:$HOME
+
+
+export PS1="${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\u\[\033[0
+1;33m\]㉿\[\033[01;34m\]\@][\[\033[01;33m\]\w\[\033[01;34m\]]\[\033[01;32m\]\$\n┼┼》\[\033[01;37m\]"
+
+clear
+neofetch |lolcat
+
+alias sh1='sudo nano -l -$ ~/.shrc'
+alias up='sudo pkg update && sudo pkg upgrade -y'
+alias ne='clear && neofetch |lolcat'
+alias x='exit'
+alias i='cd ~ && ls -la'
+alias nanno='sudo nano -l -$'
+alias i3='sudo nano -l -$  ~/.config/i3/config'
