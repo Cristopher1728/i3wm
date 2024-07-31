@@ -11,7 +11,7 @@ sudo pkg install sudo xorg i3 tilix i3status i3blocks i3lock slim curl nitrogen 
 
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
 #Paquetes Más usados
-sudo pkg install chromium libreoffice gimp vlc kate okular simplescreenrecorder ulauncher
+sudo pkg install chromium es-libreoffice gimp vlc kate okular simplescreenrecorder ulauncher
 
 sudo sysrc hald_enable="YES"
 sudo sysrc dbus_enable="YES"
@@ -23,8 +23,8 @@ echo "/usr/local/bin/i3" >> ~/.xinitrc
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Configuración de ROFI y LIGHTDM . . . \e[1;39;49m"
 mv .conkyrc ~
 # sudo rm -rf *.rasi /usr/share/rofi/themes
-sudo mkdir /usr/share/rofi/
-sudo mv -f themes /usr/share/rofi/
+sudo mkdir /usr/share/rofi
+sudo mv -f themes /usr/share/rofi
 mkdir ~/.config/rofi
 mv rofi ~/.config
 sudo mv -f i3status.conf i3blocks.conf /etc
@@ -38,7 +38,7 @@ sudo mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
 mkdir ~/.config
 mkdir ~/.config/i3
 mv config ~/.config/i3/
-mv .shrc ~
+#mv -f .shrc ~
 
 cmatrix
 neofetch |lolcat
