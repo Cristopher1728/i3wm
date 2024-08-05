@@ -103,8 +103,8 @@ uppercase no
 
 TEXT
 $hr
-${alignc}Cristopher Love GNU-Linux
-${alignc}${color8}${font DejaVu Sans:size=40}${time %H:%M:%S} ${font} ${color}
+${alignc}Cristhian Love Linux & FreeBSD
+${alignc}${color8}${font DejaVu Sans:size=33}${time %H:%M:%S} ${font} ${color}
 ${alignc}${time %a %d %b}
 ${alignc}Uptime: $uptime
 $hr
