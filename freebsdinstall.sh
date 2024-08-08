@@ -7,7 +7,7 @@
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \e[1;39;49m"
 #Paquetes basicos para el sistema
 sudo pkg update && sudo pkg upgrade
-sudo pkg install sudo xorg i3 tilix i3status i3blocks i3lock lightdm nano curl nitrogen rofi lxappearance picom numlockx pulseaudio pavucontrol papirus-icon-theme gtk-arc-themes lolcat cmatrix polybar neofetch htop btop xarchiver pcmanfm conky gthumb telegram-desktop lightdm-gtk-greeter i3status i3blocks sc-im chromium es-libreoffice gimp vlc kate okular simplescreenrecorder ulauncher
+sudo pkg install xorg i3 tilix i3status i3blocks i3lock lightdm nano curl nitrogen rofi lxappearance picom numlockx pulseaudio pavucontrol papirus-icon-theme gtk-arc-themes lolcat cmatrix polybar neofetch htop btop xarchiver pcmanfm conky gthumb telegram-desktop lightdm-gtk-greeter i3status i3blocks sc-im chromium es-libreoffice gimp vlc kate okular simplescreenrecorder ulauncher
 
 sudo sysrc hald_enable="YES"
 sudo sysrc dbus_enable="YES"
@@ -21,11 +21,12 @@ mv .conkyrc ~
 # sudo rm -rf *.rasi /usr/share/rofi/themes
 sudo mkdir /usr/share/rofi
 sudo mv -f themes /usr/share/rofi
+mkdir ~/.config
 mkdir ~/.config/rofi
 mv rofi ~/.config
 sudo mv -f i3status.conf i3blocks.conf /etc
-sudo mkdir /etc/lightdm
-sudo mv -f lightdm-gtk-greeter.conf /etc/lightdm
+#sudo mkdir /etc/lightdm
+#sudo mv -f lightdm-gtk-greeter.conf /etc/lightdm
 
 #Mover archivos de configuración a la carpeta de Nitrogen - Pantalla
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN . . . \e[1;39;49m"
@@ -33,7 +34,6 @@ sudo mv -f bsdbackgrounds backgrounds
 sudo mv -f backgrounds /usr/share
 sudo mkdir ~/.config/nitrogen
 sudo mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
-mkdir ~/.config
 mkdir ~/.config/i3
 mv config ~/.config/i3/
 mv -f .shrc ~
