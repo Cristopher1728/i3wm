@@ -18,6 +18,8 @@ echo "exec i3" >> ~/.xinitrc
 #Mover archivos de configuración a la carpeta de Nitrogen - Fondo de Pantalla
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Configuración de ROFI y LIGHTDM . . . \e[1;39;49m"
 mv .conkyrc ~
+mv -f .login_conf
+
 # sudo rm -rf *.rasi /usr/share/rofi/themes
 sudo mkdir /usr/share/rofi
 sudo mv -f themes /usr/share/rofi
