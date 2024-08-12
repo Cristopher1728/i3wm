@@ -44,21 +44,20 @@ bind ^[[5~ ed-move-to-beg
 bind ^[[6~ ed-move-to-end
 
 # set prompt: ``username@hostname:directory $ '' 
-PS1="\u@\h:\w \\$ "
+PS1="[ \u @ \h ] [ \w ]|==>> "
 
 # search path for cd(1)
 # CDPATH=:$HOME
 
 
-export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\u\[\033[01;33m\]㉿\[\033[01;34m\]\@][\[\033[01;33m\]\w\[\033[01;34m\]]\[\033[01;32m\]\$\n┼┼》\[\033[01;37m\]'
-
 clear
 neofetch |lolcat
 
-alias sh1='sudo nano -l -$ ~/.shrc'
+alias sh1='nanno ~/.shrc'
 alias up='sudo pkg update && sudo pkg upgrade -y'
 alias ne='clear && neofetch |lolcat'
 alias x='exit'
 alias i='cd ~ && ls -la'
 alias nanno='sudo nano -l -$'
-alias i3='sudo nano -l -$  ~/.config/i3/config'
+alias i3='nanno ~/.config/i3/config'
+alias gre='nanno /usr/local/etc/lightdm/lightdm-gtk-greeter.conf'

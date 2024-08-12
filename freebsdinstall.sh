@@ -7,7 +7,7 @@
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \e[1;39;49m"
 #Paquetes basicos para el sistema
 sudo pkg update && sudo pkg upgrade
-sudo pkg install xorg i3 tilix i3status i3blocks i3lock lightdm nano curl nitrogen rofi lxappearance picom numlockx pulseaudio pavucontrol papirus-icon-theme gtk-arc-themes lolcat cmatrix polybar neofetch htop btop xarchiver pcmanfm conky gthumb telegram-desktop lightdm-gtk-greeter i3status i3blocks sc-im chromium es-libreoffice gimp vlc kate okular simplescreenrecorder ulauncher
+sudo pkg install xorg i3 tilix i3status i3blocks i3lock lightdm nano curl nitrogen rofi lxappearance picom numlockx pulseaudio pavucontrol papirus-icon-theme gtk-arc-themes lolcat cmatrix polybar neofetch htop btop xarchiver pcmanfm conky gthumb telegram-desktop lightdm-gtk-greeter i3status i3blocks sc-im chromium es-libreoffice gimp vlc kate okular ulauncher
 
 sudo sysrc hald_enable="YES"
 sudo sysrc dbus_enable="YES"
