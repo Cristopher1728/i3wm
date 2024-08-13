@@ -6,6 +6,7 @@
 #Iniciando Instalación . . .
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \e[1;39;49m"
 #Paquetes basicos para el sistema
+sudo mv -f FreeBSD.conf /etc/pkg
 sudo pkg update && sudo pkg upgrade
 sudo pkg install xorg i3 tilix i3status i3blocks i3lock lightdm nano curl nitrogen rofi lxappearance picom numlockx pulseaudio pavucontrol papirus-icon-theme gtk-arc-themes lolcat cmatrix polybar neofetch htop btop xarchiver pcmanfm conky gthumb telegram-desktop lightdm-gtk-greeter i3status i3blocks sc-im chromium es-libreoffice gimp vlc kate okular ulauncher
 
