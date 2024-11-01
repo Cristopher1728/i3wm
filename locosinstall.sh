@@ -75,7 +75,7 @@ gaps outer 2
 gaps inner 7
 
 #Grosor de las lineas de las ventanas
-for_window [class='^.*'] border pixel 3
+for_window [class='^.*'] border pixel 2
 
 #class                            border         backgr.        text             indicador       child_border
 client.focused                    #bf7500        #285577        #ffffff          #ff7900         #ff7900
@@ -112,6 +112,7 @@ up = Actualizar Repositorios y Paquetes
 fa = Ejecutar Fastfetch
 x = salir de terminal (Cttol + d)
 i = Dirigirse a la carpeta Home - listado archivos
+i3 = Abre archivo de configuración de i3wm
 =====================================================' |lolcat -as 550" >> ~/.bashrc
 
 #Mover archivos de configuración a la carpeta de Nitrogen - Fondo de Pantalla
