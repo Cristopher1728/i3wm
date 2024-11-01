@@ -94,11 +94,11 @@ echo "
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\u\[\033[01;33m\]㉿\[\033[01;34m\]\@][\[\033[01;33m\]\w\[\033[01;34m\]]\[\033[01;32m\]\$\n┼┼》\[\033[01;37m\]'
 
 clear
-fastfetch
+fastfetch |lolcat -as 550
 
 alias sh1='sudo nano ~/.bashrc'
 alias up='sudo apt update && sudo apt upgrade -y'
-alias ne='clear && fastfetch'
+alias fa='clear && fastfetch |lolcat -as 550'
 alias x='exit'
 alias i='cd ~ && ls -la'
 alias i3='sudo nano ~/.config/i3/config'
