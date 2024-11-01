@@ -119,6 +119,7 @@ echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta 
 mv .conkyrc ~
 sudo rm -rf *.rasi /usr/share/rofi/themes
 sudo mv -f themes /usr/share/rofi
+sudo rm -rf ~/.config/rofi
 sudo mv -f rofi ~/.config
 sudo mv -f i3status.conf i3blocks.conf /etc
 sudo mv -f lightdm-gtk-greeter.conf /etc/lightdm
