@@ -29,7 +29,18 @@ alias up='pkg upd && pkg upg -y'
 alias ne='clear && fastfetch |lolcat -as 550'
 alias x='exit'
 alias nanno='nano -l -$'
-alias i='cd ~ && ls -l'" >> $PREFIX/etc/bash.bashrc
+alias i='cd ~ && ls -l'
+
+echo '
+=====================================================
+Atajo de Comandos
+=====================================================
+sh1 = Config bash.rc
+up = Actualizar Repositorios y Paquetes
+fa = Ejecutar Fastfetch
+x = salir de terminal (Cttol + d)
+i = Dirigirse a la carpeta Home - listado archivos
+=====================================================' |lolcat -as 550" >> $PREFIX/etc/bash.bashrc
 
 clear
 cmatrix

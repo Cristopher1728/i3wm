@@ -7,7 +7,7 @@
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \e[1;39;49m"
 #Paquetes basicos para el sistema
 sudo apt update && upgrade -y
-sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme psensor htop btop glances conky conky-all -y
+sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme psensor htop btop glances conky conky-all lightdm lightdm-gtk-greeter -y
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
 #Paquetes Más usados
 #sudo apt install chromium chromium-l10n libreoffice libreoffice-l10n-es gimp vlc notepadqq kate okular simplescreenrecorder gnome-software gnome-software-plugin-flatpak flatpak -y
@@ -101,7 +101,18 @@ alias up='sudo apt update && sudo apt upgrade -y'
 alias ne='clear && fastfetch'
 alias x='exit'
 alias i='cd ~ && ls -la'
-alias i3='sudo nano ~/.config/i3/config'" >> ~/.bashrc
+alias i3='sudo nano ~/.config/i3/config'
+
+echo '
+=====================================================
+Atajo de Comandos
+=====================================================
+sh1 = Config bash.rc
+up = Actualizar Repositorios y Paquetes
+fa = Ejecutar Fastfetch
+x = salir de terminal (Cttol + d)
+i = Dirigirse a la carpeta Home - listado archivos
+=====================================================' |lolcat -as 550" >> ~/.bashrc
 
 #Mover archivos de configuración a la carpeta de Nitrogen - Fondo de Pantalla
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Configuración de ROFI y LIGHTDM . . . \e[1;39;49m"
@@ -110,10 +121,11 @@ sudo rm -rf *.rasi /usr/share/rofi/themes
 sudo mv -f themes /usr/share/rofi
 sudo mv -f rofi ~/.config
 sudo mv -f i3status.conf i3blocks.conf /etc
+sudo mv -f lightdm-gtk-greeter.conf /etc/lightdm
 
 #Mover archivos de configuración a la carpeta de Nitrogen - Pantalla
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN . . . \e[1;39;49m"
-sudo mv -f dbackgrounds backgrounds
+sudo mv -f locoswallpapers backgrounds
 sudo mv -f backgrounds /usr/share
 sudo mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
 
