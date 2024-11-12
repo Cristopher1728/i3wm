@@ -42,7 +42,7 @@ mv config ~/.config/i3/
 mv -f .shrc ~
 
 cmatrix
-neofetch |lolcat
+fastfetch |lolcat
 
 #Terminando la Instalación
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Instalación Finalizada, modifique detalles menores en archivo /home/user/.config/i3/config y REINICIE EL EQUIPO . . . \e[1;39;49m"

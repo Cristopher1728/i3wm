@@ -96,9 +96,9 @@ bindsym $mod+v split v
 # bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
-# bindsym $mod+e layout toggle split
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -184,11 +184,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #Atajo de Teclas
-bindsym $mod+z exec gnome-screenshot -i
-bindsym $mod+w exec librewolf
-bindsym $mod+e exec leafpad
-bindsym $mod+c exec galculator
-bindsym $mod+f exec pcmanfm
+#bindsym $mod+z exec gnome-screenshot -i
+#bindsym $mod+w exec librewolf
+#bindsym $mod+e exec leafpad
+#bindsym $mod+c exec galculator
+#bindsym $mod+f exec pcmanfm
 #bindsym $mod+ exec
 
 
@@ -231,19 +231,18 @@ bar {
 bindsym $mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
 
 #Paquetes que se ejecutan al Inicio
-exec --no-startup-id lxpolkit
-exec --no-startup-id picom
+#exec --no-startup-id lxpolkit
+#exec --no-startup-id picom
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id ulauncher
 exec --no-startup-id conky
-exec --no-startup-id connman-gtk
+#exec --no-startup-id connman-gtk
 
 #Ejecutar espaciado entre ventanas
 gaps outer 2
 gaps inner 7
 
 #Grosor de las lineas de las ventanas
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 
 #class                            border         backgr.        text             indicador       child_border
 client.focused                    #bf7500        #285577        #ffffff          #ff7900         #ff7900

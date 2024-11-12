@@ -51,13 +51,12 @@ PS1="[ \u @ \h ] [ \w ]|==>> "
 
 
 clear
-neofetch |lolcat
+fastfetch |lolcat
 
-alias sh1='nanno ~/.shrc'
+alias sh1='sudo nano ~/.shrc'
 alias up='sudo pkg update && sudo pkg upgrade -y'
 alias ne='clear && neofetch |lolcat'
 alias x='exit'
 alias i='cd ~ && ls -la'
-alias nanno='sudo nano -l -$'
-alias i3='nanno ~/.config/i3/config'
-alias gre='nanno /usr/local/etc/lightdm/lightdm-gtk-greeter.conf'
+alias i3='sudo nano ~/.config/i3/config'
+alias gre='sudo nano /usr/local/etc/lightdm/lightdm-gtk-greeter.conf'
