@@ -7,7 +7,7 @@
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \e[1;39;49m"
 #Paquetes basicos para el sistema
 sudo apt update && upgrade -y
-sudo apt install i3 cmatrix curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme psensor htop btop glances conky conky-all lightdm lightdm-gtk-greeter lolcat -y
+sudo apt install i3 cmatrix curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme psensor htop btop glances conky conky-all lightdm lightdm-gtk-greeter lolcat polybar -y
 
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
 #Paquetes Más usados
@@ -62,6 +62,8 @@ sudo mkdir ~/.config/nitrogen
 sudo mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
 mkdir ~/.config/i3
 mv config ~/.config/i3/
+mkdir ~/.config/polybar
+mv config.ini ~/.config/polybar
 
 cmatrix
 fastfetch |lolcat

@@ -82,7 +82,7 @@ bindsym mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -
 exec --no-startup-id lxpolkit
 exec --no-startup-id picom
 exec --no-startup-id nitrogen --restore
-#exec --no-startup-id polybar
+exec --no-startup-id polybar
 exec --no-startup-id ulauncher
 exec --no-startup-id conky
 exec --no-startup-id connman-gtk

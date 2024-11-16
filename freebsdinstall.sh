@@ -8,7 +8,7 @@ echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquete
 #Paquetes basicos para el sistema
 sudo mv -f FreeBSD.conf /etc/pkg
 sudo pkg update && sudo pkg upgrade
-sudo pkg install xorg i3 i3status i3blocks nano curl nitrogen rofi lxappearance compton numlockx pulseaudio pavucontrol papirus-icon-theme gtk-arc-themes lolcat cmatrix htop btop xarchiver pcmanfm conky gthumb telegram-desktop lightdm lightdm-gtk-greeter sc-im chromium librewolf signal-desktop signal-cli es-libreoffice sc-im gimp vlc kate okular fastfetch tilix
+sudo pkg install xorg i3 i3status i3blocks compton nano curl nitrogen rofi lxappearance numlockx pulseaudio pavucontrol papirus-icon-theme gtk-arc-themes lolcat cmatrix htop btop xarchiver pcmanfm conky gthumb telegram-desktop lightdm lightdm-gtk-greeter chromium librewolf signal-desktop signal-cli es-libreoffice sc-im gimp vlc kate okular fastfetch tilix polybar
 
 sudo sysrc hald_enable="YES"
 sudo sysrc dbus_enable="YES"
@@ -25,8 +25,10 @@ mv -f .login_conf ~
 sudo mkdir /usr/share/rofi
 sudo mv -f themes /usr/share/rofi
 mkdir ~/.config
+mkdir ~/.config/polybar
 mkdir ~/.config/rofi
 mv rofi ~/.config
+mv config.ini ~/.config/polybar
 sudo mv -f i3status.conf i3blocks.conf /etc
 sudo mkdir /usr/local/etc/lightdm
 sudo mv -f lightdm-gtk-greeter.conf /usr/local/etc/lightdm
@@ -38,7 +40,7 @@ sudo mv -f backgrounds /usr/share
 sudo mkdir ~/.config/nitrogen
 sudo mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
 mkdir ~/.config/i3
-mv config ~/.config/i3/
+mv fconfig ~/.config/i3/config
 mv -f .shrc ~
 
 cmatrix
