@@ -24,7 +24,7 @@ export PS1='\e[1;39;49m\e[1;38;41m┌┼─┼─\e[1;38;42m[🕞\d\e[1;38;44m�
 
 clear
 fastfetch |lolcat -as 550
-alias sh1='cd $PREFIX/etc && nano -l -$ bash.bashrc'
+alias sh1='cd $PREFIX/etc && nano -l bash.bashrc'
 alias up='pkg upd && pkg upg -y'
 alias fa='clear && fastfetch |lolcat -as 550'
 alias x='exit'
