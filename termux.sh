@@ -8,7 +8,7 @@ echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Inicinado Instalación de paquet
 termux-setup-storage
 pkg update && pkg upgrade -y
 #Instalación Paquetes Necesarios
-pkg install ruby wget fastfetch vim htop w3m sc mc cmatrix -y
+pkg install ruby wget fastfetch vim htop w3m sc sc-im mc cmatrix -y
 
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Instalando LOLCAT . . . \e[1;39;49m"
 wget https://github.com/busyloop/lolcat/archive/master.zip
@@ -26,9 +26,8 @@ clear
 fastfetch |lolcat -as 550
 alias sh1='cd $PREFIX/etc && nano -l -$ bash.bashrc'
 alias up='pkg upd && pkg upg -y'
-alias ne='clear && fastfetch |lolcat -as 550'
+alias fa='clear && fastfetch |lolcat -as 550'
 alias x='exit'
-alias nanno='nano -l -$'
 alias i='cd ~ && ls -l'
 
 echo '
