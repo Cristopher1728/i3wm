@@ -8,7 +8,15 @@ echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Inicinado Instalación de paquet
 termux-setup-storage
 pkg update && pkg upgrade -y
 #Instalación Paquetes Necesarios
-pkg install ruby wget fastfetch vim htop w3m sc sc-im mc cmatrix -y
+pkg install x11-repo xfce4 tigervnc Chromium ruby wget fastfetch vim htop w3m sc sc-im mc cmatrix -y
+
+#Colocando Password a servidor VNC . . .
+echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Colocando Password a servidor VNC,  . . . \e[1;39;49m"
+vncpasswd
+
+#Iniciar el servidor VNC, poner la misma clave VNC, Esto levanta el servidor en localhost:5901 . . .
+echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Iniciar el servidor VNC, poner la misma clave VNC, Esto levanta el servidor en localhost:5901 . . . \e[1;39;49m"
+vncserver :1
 
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Instalando LOLCAT . . . \e[1;39;49m"
 wget https://github.com/busyloop/lolcat/archive/master.zip
@@ -29,6 +37,7 @@ alias up='pkg upd && pkg upg -y'
 alias fa='clear && fastfetch |lolcat -as 550'
 alias x='exit'
 alias i='cd ~ && ls -l'
+alias vnc='vncserver :1 && export DISPLAY=:1 && startxfce4 &'
 
 echo '
 =====================================================
@@ -39,6 +48,7 @@ up = Actualizar Repositorios y Paquetes
 fa = Ejecutar Fastfetch
 x = salir de terminal (Cttol + d)
 i = Dirigirse a la carpeta Home - listado archivos
+vnc = Inicia entorno gráfico Xfce y exporta la pantalla a aplicación VNC de Android en el puerto Localhost:5901, La contraseña q te pida es la que le pusiste anteriormente.
 =====================================================' |lolcat -as 550" >> $PREFIX/etc/bash.bashrc
 
 clear
