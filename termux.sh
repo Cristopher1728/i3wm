@@ -8,8 +8,8 @@ echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Inicinado Instalación de paquet
 termux-setup-storage
 pkg update && pkg upgrade -y
 #Instalación Paquetes Necesarios
-pkg instaló x11-repo
-pkg install xfce4 i3 dmenu tigervnc tilix ruby wget fastfetch vim htop w3m sc sc-im mc cmatrix -y
+pkg install x11-repo
+pkg install xfce4 i3 dmenu tigervnc tilix ruby wget fastfetch vim htop w3m sc sc-im mc cmatrix rofi nitrogen lxappearance picom pulseaudio pavucontrol papirus-icon-theme cmatrix polybar neofetch htop xarchiver pcmanfm -y
 
 #Colocando Password a servidor VNC . . .
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Colocando Password a servidor VNC,  . . . \e[1;39;49m"
