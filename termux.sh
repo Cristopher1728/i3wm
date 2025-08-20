@@ -19,6 +19,13 @@ vncpasswd
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Iniciar el servidor VNC, poner la misma clave VNC, Esto levanta el servidor en localhost:5901 . . . \e[1;39;49m"
 vncserver :1
 
+sleep 2
+mkdir /data/data/com.termux/files/home/.config
+sleep 2
+mkdir /data/data/com.termux/files/home/.config/i3
+sleep 2
+mv config /data/data/com.termux/files/home/.config/i3
+
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Instalando LOLCAT . . . \e[1;39;49m"
 wget https://github.com/busyloop/lolcat/archive/master.zip
 unzip master.zip
@@ -53,10 +60,6 @@ i = Dirigirse a la carpeta Home - listado archivos
 xfc = Inicia entorno gráfico Xfce En el puerto Localhost:5901
 i3 = Inicia entorno gráfico i3wm En el puerto Localhost:5901
 =====================================================' |lolcat -as 550" >> $PREFIX/etc/bash.bashrc
-
-mkdir /data/data/com.termux/files/home/.config
-mkdir /data/data/com.termux/files/home/.config/i3
-mv config /data/data/com.termux/files/home/.config/i3
 
 clear
 cmatrix
