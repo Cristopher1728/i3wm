@@ -17,23 +17,6 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 nitrogen
 
-echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Instalando BRAVE-BROWSER (Navegador Web que bloquea Anuncios Molestos). . . \e[1;39;49m"
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-
-sudo apt update && upgrade -y
-sudo apt install brave-browser -y
-
-echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Instalando ULAUNCHER (Lanzador de Aplicaciones). . . \e[1;39;49m"
-sudo apt update && sudo apt install -y gnupg
-gpg --keyserver keyserver.ubuntu.com --recv 0xfaf1020699503176
-gpg --export 0xfaf1020699503176 | sudo tee /usr/share/keyrings/ulauncher-archive-keyring.gpg > /dev/null
-echo "deb [signed-by=/usr/share/keyrings/ulauncher-archive-keyring.gpg] \
-          http://ppa.launchpad.net/agornostal/ulauncher/ubuntu jammy main" \
-          | sudo tee /etc/apt/sources.list.d/ulauncher-jammy.list
-sudo apt update && sudo apt install ulauncher -y
-
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Comandos al archivo CONFIG de i3wm . . . \e[1;39;49m"
 
 echo "
