@@ -19,11 +19,12 @@ vncpasswd
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Iniciar el servidor VNC, poner la misma clave VNC, Esto levanta el servidor en localhost:5901 . . . \e[1;39;49m"
 vncserver :1
 
-sleep 2
+rm -rf *.rasi /data/data/com.termux/files/usr/share/rofi/themes
+mv -f themes /data/data/com.termux/files/usr/share/rofi
+mv rofi ~/.config
+
 mkdir /data/data/com.termux/files/home/.config
-sleep 2
 mkdir /data/data/com.termux/files/home/.config/i3
-sleep 2
 mv config /data/data/com.termux/files/home/.config/i3
 
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Instalando LOLCAT . . . \e[1;39;49m"
