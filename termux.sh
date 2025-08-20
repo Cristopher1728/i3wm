@@ -38,7 +38,7 @@ alias up='pkg upd && pkg upg -y'
 alias fa='clear && fastfetch |lolcat -as 550'
 alias x='exit'
 alias i='cd ~ && ls -l'
-alias vnc='vncserver :1 && export DISPLAY=:1 && startxfce4 &'
+alias vnc='vncserver :1;export DISPLAY=:1;startxfce4 &'
 
 echo '
 =====================================================
@@ -49,7 +49,7 @@ up = Actualizar Repositorios y Paquetes
 fa = Ejecutar Fastfetch
 x = salir de terminal (Cttol + d)
 i = Dirigirse a la carpeta Home - listado archivos
-vnc = Inicia entorno gráfico Xfce y exporta la pantalla a aplicación VNC de Android en el puerto Localhost:5901, La contraseña q te pida es la que le pusiste anteriormente.
+vnc = Inicia entorno gráfico Xfce En el puerto Localhost:5901
 =====================================================' |lolcat -as 550" >> $PREFIX/etc/bash.bashrc
 
 clear
