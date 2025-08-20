@@ -9,7 +9,7 @@ termux-setup-storage
 pkg update && pkg upgrade -y
 #Instalación Paquetes Necesarios
 pkg instaló x11-repo
-pkg install xfce4 tigervnc ruby wget fastfetch vim htop w3m sc sc-im mc cmatrix -y
+pkg install xfce4 i3 dmenu tigervnc tilix ruby wget fastfetch vim htop w3m sc sc-im mc cmatrix -y
 
 #Colocando Password a servidor VNC . . .
 echo -e "\e[1;37;45m* 🌎 ┼─┼┼┼─>> Colocando Password a servidor VNC,  . . . \e[1;39;49m"
@@ -38,7 +38,8 @@ alias up='pkg upd && pkg upg -y'
 alias fa='clear && fastfetch |lolcat -as 550'
 alias x='exit'
 alias i='cd ~ && ls -l'
-alias vnc='vncserver :1;export DISPLAY=:1;startxfce4 &'
+alias xfc='vncserver :1;export DISPLAY=:1;startxfce4 &'
+alias i3='vncserver :1;export DISPLAY=:1;i3 &'
 
 echo '
 =====================================================
@@ -49,8 +50,12 @@ up = Actualizar Repositorios y Paquetes
 fa = Ejecutar Fastfetch
 x = salir de terminal (Cttol + d)
 i = Dirigirse a la carpeta Home - listado archivos
-vnc = Inicia entorno gráfico Xfce En el puerto Localhost:5901
+xfc = Inicia entorno gráfico Xfce En el puerto Localhost:5901
+i3 = Inicia entorno gráfico i3wm En el puerto Localhost:5901
 =====================================================' |lolcat -as 550" >> $PREFIX/etc/bash.bashrc
+
+mkdir /data/data/com.termux/files/home/.config/i3
+mv config /data/data/com.termux/files/home/.config/i3
 
 clear
 cmatrix
