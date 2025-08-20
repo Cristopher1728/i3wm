@@ -54,6 +54,7 @@ xfc = Inicia entorno gráfico Xfce En el puerto Localhost:5901
 i3 = Inicia entorno gráfico i3wm En el puerto Localhost:5901
 =====================================================' |lolcat -as 550" >> $PREFIX/etc/bash.bashrc
 
+mkdir /data/data/com.termux/files/home/.config
 mkdir /data/data/com.termux/files/home/.config/i3
 mv config /data/data/com.termux/files/home/.config/i3
 
