@@ -6,7 +6,7 @@
 #Iniciando Instalación . . .
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \e[1;39;49m"
 #Paquetes basicos para el sistema
-sudo apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor htop btop glances xarchiver pcmanfm gparted conky-all gthumb blueman lxpolkit lightdm-gtk-greeter -y
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
 #Paquetes Más usados
