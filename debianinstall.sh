@@ -12,7 +12,7 @@ echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Paquetes Adicionales para un Sist
 #Paquetes Más usados
 sudo apt install synaptic chromium libreoffice libreoffice-l10n-es gimp vlc kate okular -y
 
-nitrogen
+mkdir -p ~/.config/nitrogen
 
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Comandos al archivo CONFIG de i3wm . . . \e[1;39;49m"
 
