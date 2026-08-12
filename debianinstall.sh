@@ -6,14 +6,11 @@
 #Iniciando Instalación . . .
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \e[1;39;49m"
 #Paquetes basicos para el sistema
-sudo apt update && upgrade -y
-sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor polybar neofetch htop btop glances xarchiver pcmanfm gparted conky conky-all gthumb blueman lxpolkit telegram-desktop lightdm-gtk-greeter -y
+sudo apt update && apt upgrade -y
+sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor htop btop glances xarchiver pcmanfm gparted conky-all gthumb blueman lxpolkit lightdm-gtk-greeter -y
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
 #Paquetes Más usados
-sudo apt install chromium chromium-l10n libreoffice libreoffice-l10n-es gimp vlc notepadqq kate okular simplescreenrecorder gnome-software gnome-software-plugin-flatpak flatpak -y
-
-#Añadiendo repositorio de Flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo apt install synaptic chromium libreoffice libreoffice-l10n-es gimp vlc kate okular -y
 
 nitrogen
 
@@ -63,9 +60,9 @@ bindsym mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -
 
 #Paquetes que se ejecutan al Inicio
 exec --no-startup-id lxpolkit
-exec --no-startup-id picom
+#exec --no-startup-id picom
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id polybar
+#exec --no-startup-id polybar
 exec --no-startup-id ulauncher
 exec --no-startup-id conky
 exec --no-startup-id connman-gtk
@@ -94,11 +91,11 @@ echo "
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\u\[\033[01;33m\]㉿\[\033[01;34m\]\@][\[\033[01;33m\]\w\[\033[01;34m\]]\[\033[01;32m\]\$\n┼┼》\[\033[01;37m\]'
 
 clear
-neofetch |lolcat -as 500
+neofetch |lolcat
 
 alias sh1='sudo nano -l -$ ~/.bashrc'
 alias up='sudo apt update && sudo apt upgrade -y'
-alias ne='clear && neofetch |lolcat -as 500'
+alias fa='clear && fastfetch |lolcat'
 alias x='exit'
 alias i='cd ~ && ls -la'
 alias nanno='sudo nano -l -$'
@@ -122,7 +119,7 @@ sudo mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
 sudo apt install connman connman-gtk -y
 
 cmatrix
-neofetch |lolcat -as 500
+neofetch |lolcat
 
 #Terminando la Instalación
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Instalación Finalizada, modifique detalles menores en archivo /home/user/.config/i3/config y REINICIE EL EQUIPO . . . \e[1;39;49m"
