@@ -8,6 +8,7 @@ echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquete
 #Paquetes basicos para el sistema
 sudo apt update && sudo apt upgrade -y
 sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor htop btop glances xarchiver pcmanfm gparted conky-all gthumb blueman lxpolkit lightdm-gtk-greeter -y
+
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
 #Paquetes Más usados
 sudo apt install synaptic chromium libreoffice libreoffice-l10n-es gimp vlc kate okular -y
@@ -65,7 +66,8 @@ exec --no-startup-id nitrogen --restore
 #exec --no-startup-id polybar
 exec --no-startup-id ulauncher
 exec --no-startup-id conky
-exec --no-startup-id connman-gtk
+exec --no-startup-id nm-applet
+
 
 #Ejecutar espaciado entre ventanas
 gaps outer 2
@@ -91,7 +93,7 @@ echo "
 export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\u\[\033[01;33m\]㉿\[\033[01;34m\]\@][\[\033[01;33m\]\w\[\033[01;34m\]]\[\033[01;32m\]\$\n┼┼》\[\033[01;37m\]'
 
 clear
-neofetch |lolcat
+fastfetch |lolcat
 
 alias sh1='sudo nano -l -$ ~/.bashrc'
 alias up='sudo apt update && sudo apt upgrade -y'
@@ -116,10 +118,21 @@ sudo mv -f dbackgrounds backgrounds
 sudo mv -f backgrounds /usr/share
 sudo mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
 
-sudo apt install connman connman-gtk -y
+
+sudo apt install network-manager network-manager-gnome -y
+
+# Configurar NetworkManager para que administre todas las tarjetas
+sudo tee /etc/NetworkManager/conf.d/10-manage-all.conf << 'EOF'
+[keyfile]
+unmanaged-devices=none
+EOF
+
+# Activar y habilitar el servicio
+sudo systemctl enable --now NetworkManager
+
 
 cmatrix
-neofetch |lolcat
+fastfetch |lolcat
 
 #Terminando la Instalación
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Instalación Finalizada, modifique detalles menores en archivo /home/user/.config/i3/config y REINICIE EL EQUIPO . . . \e[1;39;49m"
