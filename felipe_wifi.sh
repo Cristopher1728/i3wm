@@ -42,7 +42,8 @@ echo -e "blacklist b43\nblacklist b43legacy\nblacklist brcmsmac" | sudo tee /etc
 sudo update-initramfs -u
 
 # 6. Encender interfaz y reiniciar gestor de redes
-echo -e "\e[1;33m[6/6] Encendiendo interfaz y reiniciando red...\e
+echo -e "\e[1;33m[6/6] Encendiendo interfaz y reiniciando red...\e[0m"
 
 # Reinicie PC
-echo -e "\e[1;33m[6/6] Reinicie la PC en caso no vea cambios, y se reorganize todo...\e
+echo -e "\e[1;33m[6/6] Reinicie la PC si no ve cambios, y se reorganice todo...\e[0m"
+
