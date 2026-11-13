@@ -8,7 +8,7 @@ echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquete
 #Paquetes basicos para el sistema
 sudo mv -f FreeBSD.conf /etc/pkg
 sudo pkg update && sudo pkg upgrade
-sudo pkg install xorg i3 i3status i3blocks compton nano curl nitrogen rofi lxappearance numlockx pulseaudio pavucontrol papirus-icon-theme gtk-arc-themes htop btop xarchiver pcmanfm conky gthumb lightdm lightdm-gtk-greeter chromium librewolf es-libreoffice sc-im gimp vlc kate okular fastfetch tilix
+sudo pkg install xorg i3 i3status i3blocks lolcat cmatrix compton nano curl nitrogen rofi lxappearance numlockx pulseaudio pavucontrol papirus-icon-theme gtk-arc-themes htop btop xarchiver pcmanfm conky gthumb lightdm lightdm-gtk-greeter chromium librewolf libreoffice es-libreoffice sc-im gimp vlc kate okular fastfetch tilix
 
 sudo sysrc hald_enable="YES"
 sudo sysrc dbus_enable="YES"
