@@ -11,7 +11,7 @@ sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulse
 
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
 #Paquetes Más usados
-sudo apt install synaptic chromium libreoffice libreoffice-l10n-es gimp vlc kate okular -y
+sudo apt install synaptic chromium chromium-l10n libreoffice libreoffice-l10n-es gimp vlc kate okular tuxmath tuxtype -y
 
 mkdir -p ~/.config/nitrogen
 
