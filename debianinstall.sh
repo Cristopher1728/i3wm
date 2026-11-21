@@ -15,75 +15,11 @@ sudo apt install synaptic chromium chromium-l10n libreoffice libreoffice-l10n-es
 
 mkdir -p ~/.config/nitrogen
 
-echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Comandos al archivo CONFIG de i3wm . . . \e[1;39;49m"
 
-echo "
-
-
-
-bar {
-	position top
-        status_command i3status
-        colors {
-                # background #222222ff
-                background #061b26
-                statusline #ff7900
-                separator #ff7900
-                #                   border  backgr. text
-                focused_workspace  #ff7900 #000000 #ff7900
-                active_workspace   #333333 #5f676a #ffffff
-                inactive_workspace #333333 #222222 #888888
-                urgent_workspace   #2f343a #900000 #ffffff
-        }
-}
-
-
-#bar {
-#        mode dock
-#        position top
-#        status_command i3blocks
-#        height 25
-#        colors {
-#            # background #222222ff
-#            background #061b26
-#            statusline #ff00ff
-#            separator #186e97
-#            #                   border  backgr. text
-#            focused_workspace  #444444 #444444 #ff9f00
-#            active_workspace   #333333 #5f676a #ffffff
-#            inactive_workspace #333333 #222222 #888888
-#            urgent_workspace   #2f343a #900000 #ffffff
-#        }
-#}
-
-#Activar rofi ( seleccionar tema con: *rofi-theme-selector* )
-bindsym mod+d exec --no-startup-id rofi -show drun -font 'hack 13' -show combi -icon-theme 'Papirus' -show-icons
-
-#Paquetes que se ejecutan al Inicio
-exec --no-startup-id lxpolkit
-#exec --no-startup-id picom
-exec --no-startup-id nitrogen --restore
-#exec --no-startup-id polybar
-#exec --no-startup-id ulauncher
-exec --no-startup-id conky
-exec --no-startup-id nm-applet
-
-
-#Ejecutar espaciado entre ventanas
-gaps outer 2
-gaps inner 7
-
-#Grosor de las lineas de las ventanas
-for_window [class='^.*'] border pixel 3
-
-#class                            border         backgr.        text             indicador       child_border
-client.focused                    #bf7500        #285577        #ffffff          #ff7900         #ff7900
-client.focused_inactive           #33333         #5f676a        #ffffff          #484e50         #ff00ff
-client.unfocused                  #333333        #222222        #888888          #292d2e         #4794cb
-client.urgent                     #2f343a        #900000        #ffffff          #900000         #FF0000
-client.placeholder                #000000        #0c0c0c        #ffffff          #000000         #00FFFF
-
-client.background #ff00ff" >> ~/.config/i3/config
+echo -e "\e[1;37;45m\* ㉿ ┼─┼┼┼─>> Copiando archivo de configuración de i3wm . . . \e[1;39;49m"
+# Crear carpeta .config/i3 si no existe
+mkdir -p ~/.config/i3
+cp -f config ~/.config/i3/config
 
 
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Comandos al archivo .bashrc del Usuario. . . \e[1;39;49m"
