@@ -7,6 +7,9 @@
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Inicinado Instalación de paquetes Necesarios . . . \e[1;39;49m"
 #Paquetes basicos para el sistema
 sudo apt update && sudo apt full-upgrade -y
+
+sudo apt install xorg i3wm i3status tilix network-manager network-manager-gnome -y
+
 sudo apt install curl nitrogen rofi lxappearance picom numlockx pulseaudio pulseaudio-utils pavucontrol arc-theme papirus-icon-theme lolcat cmatrix psensor htop btop glances xarchiver unzip p7zip-full pcmanfm gparted conky-all gthumb fastfetch lxpolkit lightdm-gtk-greeter firmware-linux firmware-linux-nonfree firmware-misc-nonfree -y
 
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Paquetes Adicionales para un Sistema más Completo . . . \e[1;39;49m"
@@ -41,10 +44,10 @@ alias i3='sudo nano -l -$  ~/.config/i3/config'" >> ~/.bashrc
 
 #Mover archivos de configuración a la carpeta de Nitrogen - Fondo de Pantalla
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Configuración de ROFI y LIGHTDM . . . \e[1;39;49m"
-mv .conkyrc ~
+cp .conkyrc ~
 sudo rm -rf *.rasi /usr/share/rofi/themes
 sudo mv -f themes /usr/share/rofi
-mv rofi ~/.config
+cp rofi ~/.config
 sudo mv -f i3status.conf i3blocks.conf /etc
 sudo mv -f lightdm-gtk-greeter.conf /etc/lightdm
 
@@ -52,10 +55,8 @@ sudo mv -f lightdm-gtk-greeter.conf /etc/lightdm
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN . . . \e[1;39;49m"
 sudo mv -f dbackgrounds backgrounds
 sudo mv -f backgrounds /usr/share
-sudo mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
+cp bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
 
-
-sudo apt install network-manager network-manager-gnome -y
 
 # Configurar NetworkManager para que administre todas las tarjetas
 sudo tee /etc/NetworkManager/conf.d/10-manage-all.conf << 'EOF'
