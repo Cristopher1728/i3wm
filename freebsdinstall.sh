@@ -18,17 +18,15 @@ echo "exec i3" >> ~/.xinitrc
 
 #Mover archivos de configuración a la carpeta de Nitrogen - Fondo de Pantalla
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Configuración de ROFI y LIGHTDM . . . \e[1;39;49m"
-mv .conkyrc ~
-mv -f .login_conf ~
+cp .conkyrc ~
+cp -f .login_conf ~
 
 # sudo rm -rf *.rasi /usr/share/rofi/themes
 sudo mkdir /usr/share/rofi
 sudo mv -f themes /usr/share/rofi
 mkdir ~/.config
-mkdir ~/.config/polybar
 mkdir ~/.config/rofi
 mv rofi ~/.config
-mv config.ini ~/.config/polybar
 sudo mv -f i3status.conf i3blocks.conf /etc
 sudo mkdir /usr/local/etc/lightdm
 sudo mv -f lightdm-gtk-greeter.conf /usr/local/etc/lightdm
@@ -37,8 +35,8 @@ sudo mv -f lightdm-gtk-greeter.conf /usr/local/etc/lightdm
 echo -e "\e[1;37;45m* ㉿ ┼─┼┼┼─>> Insertando Archivos a la carpeta de Config de NITROGEN . . . \e[1;39;49m"
 sudo mv -f bsdbackgrounds backgrounds
 sudo mv -f backgrounds /usr/share
-sudo mkdir ~/.config/nitrogen
-sudo mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
+mkdir ~/.config/nitrogen
+mv -f bg-saved.cfg nitrogen.cfg ~/.config/nitrogen
 mkdir ~/.config/i3
 mv fconfig ~/.config/i3/config
 mv -f .shrc ~
